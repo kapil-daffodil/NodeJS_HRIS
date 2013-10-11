@@ -1,0 +1,23 @@
+<!doctype HTML>
+        <html ng-app>
+            <head>
+                <script type="text/javascript" src="js/jquery.js"></script>
+                <script type="text/javascript" src="js/angular.js"></script>
+                <script type="text/javascript" src="js/dateController.js"></script>
+                <script type="text/javascript" src="js/dateFormat.js"></script>
+
+
+               </head>
+
+            <body ng-controller="DATECTL">
+                  <div id="dateholder">&nbsp;</div>
+                  <input type="text" ng-model="dateinput" title="{{dateinput}}" style="width: 300px;"/>
+                  <input type="button" value="Current date" ng-click="current(true,false,false,false)"/>
+                  <input type="button" value="Current Week" ng-click="current(false,false,false,true)"/>
+                  <input type="button" value="Current Month" ng-click="current(false,true,false,false)"/>
+                  <input type="button" value="Current Year" ng-click="current(false,false,true,false)"/>
+
+                  <input type="button" value="Previous" ng-click="prev()"/>
+                  <input type="button" value="Next" ng-click="next()"/>
+            </body>
+        </html>

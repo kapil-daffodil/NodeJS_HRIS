@@ -1,0 +1,29 @@
+<!doctype HTML>
+<html  ng-app="applane">
+<head lang="en">
+    <meta  charset="utf-8">
+    <title>Applane Front End</title>
+
+    <link rel="stylesheet" type="text/css" href="css/ng-grid.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/prettify.css">
+    <link rel="stylesheet" type="text/css" href="css/applane.css"/>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/angular-strap.js"></script>
+    <script type="text/javascript" src="js/applane-strap.js"></script>
+    <script type="text/javascript" src="js/ng-grid.js"></script>
+    <script type="text/javascript" src="js/ng-change.js"></script>
+
+
+</head>
+<body ng-controller="AppCtrl" >
+
+<input type="button" ng-click="clear()" value="Clear watch">
+<app-text ng-change = "change()" ng-model-onblur></app-text>
+{{row}}
+
+</body>
+</html>

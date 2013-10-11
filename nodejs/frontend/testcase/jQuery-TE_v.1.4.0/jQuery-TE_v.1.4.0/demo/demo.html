@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+<link type="text/css" rel="stylesheet" href="../jquery-te-1.4.0.css">
+
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../angular.js" charset="utf-8"></script>
+
+<script type="text/javascript" src="../main.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+        webApp.controller('appRichTextBoxController', function ($scope) {
+            $scope.pageTempalte = {template : "<b>Rohit Bansal</b>"};
+        });
+    </script>
+
+</head>
+
+<body ng-app="webApp" ng-controller="appRichTextBoxController">
+
+ <input type="text" ng-model='pageTempalte.template'>
+ <app-rich-text-box model='pageTempalte' field='template'></app-rich-text-box>
+
+
+ {{pageTempalte | json}}
+</body>
+</html>

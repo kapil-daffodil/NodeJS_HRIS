@@ -1,0 +1,57 @@
+<!doctype HTML>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <title>Applane Front End</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/applane.css"/>
+    <link rel="stylesheet" type="text/css" href="css/advancesearch.css"/>
+    <link href="css/bootstrap-datepicker.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/angular.js"></script>
+
+    <script type="text/javascript" src="js/applane-strap.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+</head>
+<body ng-app="applane" ng-controller="AppCtrl">
+<div style="position: absolute; left: 5px; top: 0; right: 5px;bottom: 0;">
+    <div style="position:absolute;left:5px; top:0; right:5px;height: 40px;">
+        <div class="app-header">
+            <div class="applane-logo"><img src="images/logo.jpg"></div>
+            <!--<input style='width:300px' id="log" placeholder="Logs" type="text"/>-->
+
+            <div class="app-user" ng-show="loggedin">
+                <span class="app-user-name"><b>Welcome</b> {{username}}</span>
+
+                <span class="app-user-spearator">|</span>
+
+                <app-action-collection ng-init="action=organizationcollection" style='color: #003EA8;float: left;'></app-action-collection>
+
+                <span class="app-user-spearator">|</span>
+
+                <app-action-collection ng-init="action=viewgroupcollection" style='color: #003EA8;float: left;'></app-action-collection>
+
+                <span class="app-user-spearator">|</span>
+
+                <span class="app-sign-out" ng-click="logOut()">Sign out</span>
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <div style="position: absolute;top:40px;left:0px;right:0px;color:#ffffff;height:36px;"
+         class="app-menu-container-background">
+        <app-menus class='app-menu-container-border'></app-menus>
+    </div>
+    <div id="view-container" style="position:absolute;left:0px; top:76px; right:0px;bottom: 0px;"
+         class="app-view-container"></div>
+    <!--<div style="position:absolute;left:0; bottom:0px;background-color: #009999;height: 20px;right: 0"></div>-->
+</div>
+<div id="app_popup"></div>
+<div id="busy-message" class="app-busy-message-container" ng-show="showbusymessage">
+    <div class="app-busy-message" ng-bind="busymessage"></div>
+</div>
+</body>
+</html>

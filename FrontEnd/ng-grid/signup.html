@@ -1,0 +1,81 @@
+<html >
+    <head>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/angular.js"></script>
+        <script type="text/javascript" src="js/signup.js"></script>
+        <script type="text/javascript" src="js/applane-strap.js"></script>
+
+        <link href="css/login.css" rel="stylesheet"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="css/prettify.css" rel="stylesheet"/>
+
+    </head>
+
+    <body>
+
+    <div class="login-container" ng-app="applane">
+
+        <!--header block start-->
+
+        <div class="login-page-header">
+            <div class="logo"><a href="/"><img src="/images/applane_large_logo.png" alt="Logo"/></a></div>
+
+        </div>
+
+        <!--header block end-->
+
+
+        <!--center block start-->
+            <div class="login-page-center-body login-page-center-body-one">
+                <div class="inner-center">
+
+                    <!--left block start-->
+                    <div class="left-body left-body-one">
+                        <img src="/images/tesk_manager.png" alt="Task-manager"/>
+                    </div>
+                    <!--left block end-->
+
+
+                    <div class="right-body right-body-one">
+                        <div ng-controller="signup" class="right-body-inner right-body-inner-one">
+                            <div class="sign-text">Sign Up</div>
+
+                            <div class="input-divs"> <input type="text" ng-model="username" id="username" placeholder="Username"/> </div>
+
+                            <div class="input-divs">  <input type="password" ng-model="password" id="password" placeholder="Password"/></div>
+
+                            <div class="input-divs"> <input type="password" ng-model="confirmpassword" id="confirm-password" placeholder="Confirm Password"/></div>
+
+
+                            <div style="float:left;margin-bottom:23px;;">
+                                <script type="text/javascript" src="http://api.recaptcha.net/challenge?k=6LdEueISAAAAAKEOiCoqsEt_ur765-GbNmWrGd7c">&nbsp;</script>
+                                <noscript><iframe src="http://api.recaptcha.net/noscript?k=6LdEueISAAAAAKEOiCoqsEt_ur765-GbNmWrGd7c" height="300" width="500" frameborder="0">
+                                </iframe><br/> <textarea name="recaptcha_challenge_field" rows="3" cols="40"> </textarea>
+                                    <input type="hidden" name="recaptcha_response_field" value="manual_challenge"/></noscript>
+                            </div>
+
+
+                              <input class="btn-primary" type="button" value="Sign Up" ng-click="userSignUp()"/>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--center block start-->
+
+
+        <div class="login-page-header">
+            <div class="logo"><a href="/"><img src="/images/applane_large_logo.png" alt="Logo"/></a></div>
+            <div class="copyright-parent">
+                <span class="copyright">&copy; 2012</span>
+                <span><img src="/images/applane-logo.jpg.png" alt="Logo"/></span>
+            </div>
+        </div>
+
+
+
+
+     </div>
+
+    </body>
+</html>

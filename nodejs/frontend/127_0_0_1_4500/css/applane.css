@@ -1,0 +1,1786 @@
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+input {
+    outline: none;
+}
+
+.app-view {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.app-tool-bar {
+    /*display: table-row;*/
+    height: 40px;
+    margin: 1px 0 2px;
+    font-size: 16px;
+}
+
+/*
+.app-grid-view-container {
+    height: 100%;
+    display: table-row;
+}
+
+.app-grid-view {
+    position: relative;
+    height: 100%;
+}
+
+.gridStyle {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    bottom: 0px;
+    right: 0;
+    background: none repeat scroll 0 0 #F3F0EB;
+}
+.app-button {
+    padding: 4px 5px;
+    text-align: center;
+    white-space: nowrap;
+}
+*/
+
+.app-column-group {
+    padding: 0 10px;
+}
+
+.app-popup-title {
+    background-color: lightgray;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+}
+
+.app-popup-body {
+    padding: 5px
+}
+
+.app-busy-message-container {
+    z-index: 1000000;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+.app-busy-message {
+    margin: 0 auto;
+    margin-top: 5px;
+    background-color: red;
+    color: white;
+    display: table;
+    padding: 2px;
+}
+
+.app-user {
+    float: right;
+    padding-top: 12px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.app-user-spearator {
+    padding: 0px 8px;
+    float: left;
+}
+
+.app-user-name {
+    color: #1E90F2;
+    float: left;
+}
+
+/** APP COLLECTION**/
+
+.app-action-collection {
+    display: inline;
+}
+
+.app-action-collection-setting-parent {
+    display: inline;
+    padding: 0px;
+}
+
+.app-action-collection-down-arrow-parent {
+    display: inline;
+    padding: 5px;
+}
+
+.app-action-collection-down-arrow-image {
+    width: 10px;
+    height: 10px;
+}
+
+.applane-logo {
+    float: left;
+    padding-top: 3px;
+}
+
+.applane-logo img{
+    width: 130px;
+    height:35px;
+}
+
+.ngRow:hover {
+    background-color: #EAEAEA;
+}
+
+.columns-group-parent {
+    /*margin: 15px 30px;*/
+}
+
+.columns-group-label {
+    background: none repeat scroll 0 0 #a9a9a9;
+    color: white;
+    font-size: 15px;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+.two-divs {
+    width: 50%;
+}
+
+.three-divs {
+    width: 30%;
+}
+
+.four-divs {
+    width: 25%;
+}
+
+.five-divs {
+    width: 20%;
+}
+
+.ref-container {
+    position: relative;
+    border: 1px solid #CCCCCC;
+
+}
+
+.ref-input-container {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 20px;
+}
+
+.ref-input {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+.ref-button {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    bottom: 0px;
+    width: 20px;
+    background: url("../images/down_arrow_new.png") no-repeat scroll center center / 10px auto transparent;
+    border: none;
+    height: 100%;
+    padding: 0px;
+}
+
+.duration-container {
+    position: relative;
+    border: 1px solid #CCCCCC;
+    height: 100%;
+}
+
+.duration-time-container {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 60px;
+}
+
+.duration-input {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+.duration-ref-container {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    bottom: 2px;
+    height: 100%;
+}
+
+.app-sign-out {
+    color: #003EA8;float: left;
+}
+
+.app-view-container {
+
+}
+
+/**** APP BUTTON STYLE : FOR ALL BUTTON****/
+
+.app-button-padding {
+    padding: 2px 8px;
+}
+
+.app-button-margin {
+    margin: 2px;
+}
+
+.app-button {
+    background-color: #F3F3F3;
+    background-image: linear-gradient(to bottom, #FFFFFF, #E6E6E6);
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #B3B3B3;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    text-shadow: 1px 1px white;
+    vertical-align: middle;
+}
+
+.app-button-border {
+    border-radius: 3px 3px 3px 3px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.app-button-shadow {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    -o-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.app-button:hover {
+    background-image: linear-gradient(to bottom, #F3F3F3, #E6E6E6);
+    -webkit-background-image: linear-gradient(to bottom, #F3F3F3, #E6E6E6);
+    -o-background-image: linear-gradient(to bottom, #F3F3F3, #E6E6E6);
+    -moz-background-image: linear-gradient(to bottom, #F3F3F3, #E6E6E6);
+}
+
+/****Applied Filter on App Tool Bar****/
+
+.app-applied-filter-label {
+    display: inline;
+    padding-right: 5px;
+}
+
+.app-remove-filter {
+    display: inline;
+    font-size: 11px;
+    padding: 0 0px 0 2px;
+}
+
+/****App View*****/
+
+.app-view-wrapper {
+/*
+    background: none repeat scroll 0 0 #F3F0EB;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+*/
+}
+
+/*** Applane Datepicker ****/
+
+.app-grid-date-picker-calender-image {
+    background: url("../images/calender.png") no-repeat scroll center center / 17px auto transparent;
+    border: medium none;
+    bottom: 0;
+    cursor: pointer;
+    height: 100%;
+    padding: 0;
+    position: absolute;
+    right: 4px;
+    top: 0;
+    width: 19px;
+}
+
+.app-grid-datepicker-parent {
+    position: relative;
+
+    float: left;
+}
+
+.app-grid-date-picker-input {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    border: 0px none;
+    right: 0px;
+    left: 0px;
+    height: 100%;
+    padding: 0px;
+}
+
+.datepicker-parent-div {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #CCCCCC;
+    min-height: 20px;
+    position: relative;
+}
+
+.datepicker-input-parent {
+    border: 0 none;
+    bottom: 2px;
+    left: 2px;
+    position: absolute;
+    right: 28px;
+    top: 0;
+}
+
+.datepicker-input-parent input[type="text"] {
+    border: medium none;
+    height: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+.datepicker-calender-image {
+    background-color: white;
+    background-image: url("../images/calender.png");
+    background-repeat: no-repeat;
+    background-size: 16px auto;
+    border: medium none;
+    position: absolute;
+    right: 4px;
+    top: 1px;
+    width: 16px;
+}
+
+/**** Applane Grid ****/
+
+.applane-grid-body tr:hover .app-row-action-arrow {
+    background: url("../images/row-action-arrow.png") no-repeat scroll center center transparent;
+    background-position: 1px 2px;
+}
+
+.applane-grid-body tr:focus .app-row-action-arrow {
+    background: url("../images/row-action-arrow.png") no-repeat scroll center center transparent;
+    background-position: 1px 2px;
+}
+
+.app-grid {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.applane-grid {
+    empty-cells: show;
+}
+
+.applane-grid-header {
+    empty-cells: show;
+    border-top: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    background-color: #E6E6E6;
+    color: #0B75D1;
+}
+
+.applane-grid-header th {
+    border-right: 1px solid #CCCCCC;
+    font-weight: normal;
+    height: 25px;
+}
+
+.applane-grid-body {
+    empty-cells: show;
+    border-top: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+}
+
+.applane-grid-body td {
+    border-right: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.applane-grid-cell-focus {
+    box-shadow: 0 0 8px 1px #777777;
+    -moz-box-shadow: 0 0 8px 1px #777777;
+    -o-box-shadow: 0 0 8px 1px #777777;
+    -webkit-box-shadow: 0 0 8px 1px #777777;
+}
+
+.applane-grid-body tr:hover {
+    background: none repeat scroll 0 0 #FCE7C2 !important;
+    /*background: none repeat scroll 0 0 #D3D3D3 !important*/
+}
+
+.applane-grid td {
+    overflow: hidden;
+}
+
+.applane-grid th {
+    overflow: hidden;
+}
+
+.applane-grid-cell {
+
+}
+
+.app-selected-tr {
+ /*   background-color: #d3d3d3 !important;*/
+    background:  none repeat scroll 0 0 #FCE7C2 !important;
+}
+
+.app-selected-tr .app-row-action-arrow {
+    background: url("../images/row-action-arrow.png") no-repeat scroll center center transparent;
+    background-position: 1px 2px;
+
+}
+
+.applane-grid-cell:focus {
+    /*background-color: #a9a9a9;*/
+    background: none repeat scroll 0 0 #F5B549;
+    /*box-shadow: 0 0 8px 1px #777777;*/
+    /*-moz-box-shadow: 0 0 8px 1px #777777;*/
+    /*-o-box-shadow: 0 0 8px 1px #777777;*/
+    /*-webkit-box-shadow: 0 0 8px 1px #777777;*/
+    outline: medium none;
+}
+
+.applane-grid-row-even {
+    background-color: #F5F5F5;
+}
+
+.applane-grid-row-odd {
+    background-color: #FFFFFF;
+}
+
+.applane-grid-cell-inner {
+    /* Padding issue in Mozzila browser, this property works only in mozzila */
+    -moz-padding-start: 1px;
+}
+
+.applane-grid-cell input[type="text"] {
+}
+
+/** Applane Menus **/
+
+.app-menu-container-background {
+    /*    background-image: url("../images/menu-background.jpg");*/
+    /*background-repeat: repeat;*/
+    /*background: none repeat scroll 0 0 #6495ED;*/
+    background: url(../images/header.jpg)
+}
+
+.app-menu-container-border {
+ height:inherit;
+}
+
+.app-menu {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    height: inherit;
+    line-height: 36px;
+    padding: 0 10px;
+background:url("../images/sep_bg.png") no-repeat scroll right center transparent;
+}
+
+.app-menu:hover {
+    background: none repeat scroll 0 0 #F5B549;
+}
+
+.app-menu-border {
+/*    border-right: 1px solid #7EB8F1;*/
+}
+
+.app-menu-padding {
+    padding: 3px 7px;
+}
+
+.app-menu-bold-font {
+    font-weight: bold;
+}
+
+.app-panel-cell {
+    width: 50% !important;
+    float: left;
+    margin-bottom: 15px;
+
+}
+
+/**  Applane Panel  **/
+
+.app-panel-full-row {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.app-panel-half-row {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+
+.app-panel-label {
+    float: left;
+    width: 100px;
+    text-align: right;
+    word-wrap: break-word;
+    padding-top: 5px;
+
+}
+
+.app-panel-input-parent {
+    /*  margin: 0 0 15px 10px;*/
+    float: left;
+    margin: 0 0 0px 10px;
+}
+
+.app-panel {
+    display: table;
+    width: 100%;
+    height: 100%;
+    background-color: #EAEAEA;
+}
+
+.app-panel-input {
+    border: 1px solid #CCCCCC;
+    padding: 0px !important;
+    /*width: 187px;*/
+}
+
+.app-panel-arrows-parent {
+    float: left;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+/** Applane Setting **/
+
+.app-setting {
+    display: inline;
+    height: 16px;
+    vertical-align: middle;
+    width: 16px;
+}
+
+.app-menu-setting {
+    display: inline;
+    vertical-align: middle;
+    width: 20px;
+}
+
+
+.app-row-action-arrow {
+}
+
+.app-container {
+    display: table-row;
+    height: 100%;
+}
+
+.app-wrapper {
+    height: 100%;
+    position: relative;
+}
+
+.app-wrapper-child {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+
+.app-wrapper-child-overflow {
+    overflow-x: auto;
+    overflow-y: scroll;
+}
+
+/** Applane Default Button **/
+
+.app-bar-button {
+    float: left;
+    min-height: 20px;
+    width: 28px;
+    cursor: pointer;
+    margin: 0 7px;
+    padding-top: 21px;
+}
+
+.app-close-button {
+    background: url("../images/close_new.png") no-repeat center center / 25px auto transparent;
+}
+
+/*.app-close-button:hover {*/
+    /*background: url("../images/close_img_hover.png") no-repeat center center / 31px auto transparent;*/
+/*}*/
+
+.app-refresh-button {
+    background: url("../images/refresh_new.png") no-repeat center center / 24px auto transparent;
+}
+
+/*.app-refresh-button:hover {*/
+    /*background: url("../images/refresh_btn_img_hover.png") no-repeat center center / 31px auto transparent;*/
+/*}*/
+
+/*
+.app-bar-button:hover {
+    float: left;
+    min-height: 23px;
+    width: 28px;
+}
+*/
+
+.app-delete-button {
+    background: url("../images/delete_new.png") no-repeat scroll center center / 22px auto transparent;
+}
+
+/*.app-delete-button:hover {*/
+    /*background: url("../images/delete_img_hover.png") no-repeat scroll center center / 31px auto transparent;*/
+/*}*/
+
+.app-save-button {
+    background: url("../images/save_new.png") no-repeat scroll center center / 26px auto transparent;
+}
+
+.app-resize-button {
+    background: url("../images/maximize.png") no-repeat scroll center center / 23px auto transparent;
+}
+
+.app-update-button {
+    background: url("../images/update.png") no-repeat scroll center center / 17px auto transparent;
+}
+
+/*.app-save-button:hover {*/
+    /*background: url("../images/save_img_hover.png") no-repeat scroll center center / 31px auto transparent;*/
+/*}*/
+
+.app-column-view-button {
+    background: url("../images/columns.png") no-repeat scroll center center / 29px auto transparent;
+}
+
+.app-column-order-by-button {
+    background: url("../images/order_new.png") no-repeat scroll center center / 24px auto transparent;
+}
+
+.app-insert-button {
+    background: url("../images/insert_new.png") no-repeat scroll center center / 22px auto transparent;
+}
+
+.app-bar-basic {
+    background: -moz-linear-gradient(center bottom , #EBBF73 23%, #F5B649 62%, #F0B968 81%) repeat scroll 0 0 transparent;
+    background: -webkit-linear-gradient(#EBBF73 23%, #F5B649 62%, #F0B968 81%);
+    color: #FFFFFF;
+    float: left;
+    height: inherit;
+    line-height: 30px;
+}
+
+.app-height-auto {
+    height: auto !important;
+}
+
+.app-bar-metadata {
+    background-image: -moz-linear-gradient(center bottom , #EBBF73 23%, #F5B649 62%, #F0B968 81%);
+    background: -webkit-linear-gradient(#EBBF73 23%, #F5B649 62%, #F0B968 81%);
+    float: right;
+
+    height: inherit;
+    padding: 0 10px;
+}
+
+.app-bar-quickview {
+    background: -moz-linear-gradient(center bottom , #EBBF73 23%, #F5B649 62%, #F0B968 81%) repeat scroll 0 0 transparent;
+    background: -webkit-linear-gradient(#EBBF73 23%, #F5B649 62%, #F0B968 81%);
+    border-right: 1px solid white;
+    float: left;
+    font-weight: bold;
+    height: inherit;
+    line-height: 40px;
+    padding: 0 10px;
+}
+
+.app-child-view-button {
+    background: url("../images/rows.png") no-repeat scroll center center / 22px auto transparent;
+}
+
+.app-filter-view-button {
+    background: url("../images/filter_new.png") no-repeat scroll center center / 24px auto transparent;
+}
+
+.app-bar-quickview-wrapper {
+    min-height: 19px;
+}
+
+/**** APP MULTI-REFRENCE ****/
+
+.app-multirefrence-text {
+    float: left;
+    margin-right: 5px;
+}
+
+.app-multirefrence-parent {
+    background: none repeat scroll 0 0 lightgray;
+    border: 1px solid darkgray;
+    border-radius: 2px;
+    float: left;
+    font-size: 12px;
+    margin: 3px 0 3px 3px;
+    padding: 2px 5px;
+}
+
+.app-multirefrence-cross {
+
+}
+
+.app-multi-refrence-down-arrow {
+    background: url("../images/down_arrow_new.png") no-repeat scroll center center / 10px auto transparent;
+    border: medium none;
+    cursor: pointer;
+    float: right;
+    margin-right: 8px;
+    width: 8px;
+    height: 100%;
+}
+
+.app-multi-refrence-loading-image {
+    /** on Multirefrence Loading Image shows in the input texr**/
+    float: left;
+
+    padding-top: 5px;
+}
+
+.app-input-loading-image {
+    position: absolute;
+    right: 0;
+    top: 7px;
+}
+
+/*** APP GROUP TABLE ***/
+
+.app-group-table-arrow-parent {
+    width: 10px;
+}
+
+.app-group-table-arrow {
+    /*background: url("../images/right-solid-arrow.png") no-repeat scroll center center / 10px auto transparent;*/
+    width: 10px;
+    cursor: pointer;
+    height: 20px;
+}
+
+.app-group-table-arrow-false {
+
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+
+    transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    -moz-transition: .5s;
+}
+
+.app-group-table-arrow-true {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+
+    transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    -moz-transition: .5s;
+}
+
+/**** APPLANE DEFAULT CLASSES *******/
+.app-bottom-position-zero {
+    bottom: 0;
+}
+
+.app-top-position-zero {
+    top: 0;
+}
+
+.app-overflow-auto {
+    overflow: auto;
+}
+
+.app-overflow-hiiden {
+    overflow: hidden;
+}
+
+.app-position-absolute {
+    position: absolute;
+}
+
+.app-width-full {
+    width: 100%;
+}
+
+.app-height-full {
+    height: 100%;
+}
+
+.app-button-padding {
+    padding: 5px 9px;
+}
+
+.app-font-weight-bold {
+    font-weight: bold;
+}
+
+.app-text-align-center {
+    text-align: center;
+}
+
+.app-text-align-right {
+    text-align: right;
+}
+
+.app-text-align-left {
+    text-align: left;
+}
+
+.app-float-left {
+    float: left;
+}
+
+.app-width-auto {
+    width: auto;
+}
+
+.app-vertical-align-top {
+    vertical-align: top;
+}
+
+.app-box-shadow {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+.app-header-background-color {
+    background: #d3d3d3;
+}
+
+.app-dark-gray-backgroud-color {
+    background: #a9a9a9;
+}
+
+.app-white-backgroud-color {
+    background: #ffffff;
+}
+
+.app-light-gray-backgroud-color {
+    background: #EAEAEA;
+}
+
+.app-white-space-nowrap {
+    white-space: nowrap;
+}
+
+.app-cursor-pointer {
+    cursor: pointer;
+}
+
+.app-row-action:hover, .app-action-collection-option:hover {
+    /*background: #a9a9a9;*/
+    background: none repeat scroll 0 0 #F5B549 !important;
+    color:white;
+}
+
+.app-group-tr-false {
+    background: none repeat scroll 0 0 #EAEAEA;
+}
+
+.app-padding-five-px {
+    padding: 5px;
+}
+
+.app-zero-padding {
+    padding: 0 !important;
+}
+
+.app-zero-border-radius {
+    border-radius: 0 0 0 0 !important;
+}
+
+.app-text-box-border {
+    border: 1px solid #CCCCCC;
+}
+
+.applied-search-filter-input {
+    min-height: 24px;
+}
+
+.app-filter-view-margin {
+    margin: 0 0 15px 10px;
+}
+
+.app-date-filter-left-arrow {
+    background: url("../images/left-arrow.png") no-repeat scroll center center / 12px auto transparent;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 20px;
+}
+
+.app-vertical-align-middle {
+    vertical-align: middle;
+}
+
+.app-date-filter-right-arrow {
+    background: url("../images/right-arrow.png") no-repeat scroll center center / 12px auto transparent;
+    bottom: 0;
+    position: absolute;
+    right: 27px;
+    top: 0;
+    width: 20px;
+}
+
+.app-display-inline-table {
+    display: inline-table;
+}
+
+.app-dates-schedule {
+    width: 43px;
+}
+
+.app-padding-left-twenty-px {
+    padding-left: 20px;
+}
+
+.app-padding-left-ten-px {
+    padding-left: 10px;
+}
+
+.app-padding-top-four-px {
+    padding-top: 4px;
+}
+
+.app-padding-top-bottom-ten-px {
+    padding: 10px 0px;
+}
+
+.app-width-one-twenty-px {
+    width: 120px;
+}
+
+.app-margin-top-one-px {
+    margin-top: 1px;
+}
+
+.app-display-table {
+    display: table;
+}
+
+.app-applied-filter-padding {
+    padding: 2px 9px;
+}
+
+.app-applied-filter-margin {
+    margin: 1px;
+}
+
+.app-text-decoration-underline {
+    text-decoration: underline;
+}
+
+.app-blue-text-color {
+    color: #0B75D1;
+}
+
+.app-padding-ten-px {
+    padding: 10px;
+}
+
+.app-word-wrap-break-word {
+    word-wrap: break-word;
+}
+
+.app-padding-right-twenty-px {
+    padding-right: 20px;
+}
+
+.app-right-arrow {
+    background: url("../images/right-arrow.png") no-repeat scroll center center / 12px auto transparent;
+}
+
+.app-left-arrow {
+    background: url("../images/left-arrow.png") no-repeat scroll center center / 12px auto transparent;
+}
+
+.app-width-twenty-px {
+    width: 20px;
+}
+
+.app-height-twenty-px {
+    height: 20px;
+}
+
+.popup_wrapper {
+    background: none repeat scroll 0 0 white;
+
+    border-radius: 2px 2px 2px 2px;
+    bottom: 0;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 9998;
+}
+
+.popup_container {
+    float: left;
+    position: relative;
+}
+
+.app-none-background {
+    background: none repeat scroll 0 0 transparent;
+}
+
+.app-none-border {
+    border: medium none;
+}
+
+.app-remove-file-button {
+    color: #0088CC;
+    margin: 0;
+    padding: 3px 0 0;
+}
+
+.app-panel-schedule-pop-up {
+    width: 475px !important;
+}
+
+.app-border-top-black {
+    border-top: 1px solid #000000;
+}
+
+.app-border-bottom-black {
+    border-bottom: 1px solid #000000;
+}
+
+.textarea-div {
+    border-style: solid;
+    border-width: 1px;
+    display: none;
+    font-family: monospace;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15px;
+    padding: 2px;
+    position: absolute;
+    white-space: pre-wrap;
+    width: 170px;
+    word-wrap: break-word;
+}
+
+.app-auto-resize-textarea {
+    border: 4px solid #d3d3d3;
+    resize: none;
+}
+
+.app-auto-resize-div {
+    position: absolute;
+    display: none;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.app-color-white {
+    color: white;
+}
+
+.app-padding-bottom-five-px {
+    padding-bottom: 5px;
+}
+
+/**************************** [ APP COMPOSITE CSS START]   ******************************************************/
+.app-composite-container {
+    position: relative;
+    border: 1px solid #CCCCCC;
+    height: 100%;
+}
+
+.app-composite-value-container {
+    border-right: 1px solid #CCCCCC;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 60px;
+    top: 0;
+}
+
+.app-composite-type-container {
+    bottom: 2px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    width: 60px;
+    top: 0px;
+}
+
+.app-composite-number-container {
+    height: 100%;
+}
+
+.app-composite-container {
+    min-height: 24px;
+}
+
+/**************************** [ APP COMPOSITE CSS END]   ******************************************************/
+
+/**************************** [ APP NUMBER CSS START]   ******************************************************/
+.app-number-container input[type="text"] {
+    border: medium none;
+    height: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+/**************************** [ APP NUMBER CSS END]   ******************************************************/
+
+/**************************** [ APP LOOKUP CSS END]   ******************************************************/
+.app-look-up-container {
+    position: relative;
+    height: 100%;
+}
+
+.app-look-up-container-background {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+
+.app-look-up-text-container {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+
+.app-look-up-container .first-input {
+    border: medium none;
+    height: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+.app-look-up-container .second-input {
+    background: url("../images/down_arrow_new.png") no-repeat scroll center center / 10px auto transparent;
+    border: medium none;
+    bottom: 0;
+    height: 100%;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    cursor: pointer;
+}
+
+/**************************** [ APP LOOKUP CSS END]   ******************************************************/
+/*******************************RTE CSS*************************************************************/
+.jqte {
+    border: #000 1px solid;
+    width: 620px;
+}
+
+.jqte_toolbar {
+    overflow: auto;
+    padding: 3px 4px;
+    background: #EEE;
+    border-bottom: #BBB 1px solid;
+}
+
+.jqte_tool {
+    float: left;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.jqte_tool, .jqte_tool_icon, .jqte_tool_label {
+    border: #EEE 1px solid;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px
+}
+
+.jqte_hiddenField {
+    display: none
+}
+
+.jqte_tool_icon {
+    display: block;
+    width: 22px;
+    height: 22px;
+    background: url(../images/rte.png) no-repeat
+}
+
+.jqte_tool.jqte_tool_1 .jqte_tool_label {
+    position: relative;
+    display: block;
+    padding: 3px;
+    width: 70px;
+    height: 16px;
+    overflow: hidden;
+}
+
+.jqte_tool.jqte_tool_1 .jqte_tool_text {
+    font: bold 13px Arial, sans-serif;
+    color: #222;
+}
+
+.jqte_tool.jqte_tool_1 .jqte_tool_icon {
+    position: absolute;
+    top: 10px;
+    right: 2px;
+    width: 6px;
+    height: 4px;
+    background-position: -19px -23px;
+    border: none;
+    -webkit-border-radius: none;
+    -moz-border-radius: none
+}
+
+.jqte_tool.jqte_tool_2 .jqte_tool_icon {
+    background-position: 0 0
+}
+
+.jqte_tool.jqte_tool_3 .jqte_tool_icon {
+    background-position: -22px 0
+}
+
+.jqte_tool.jqte_tool_4 .jqte_tool_icon {
+    background-position: -44px 0
+}
+
+.jqte_tool.jqte_tool_5 .jqte_tool_icon {
+    background-position: -66px 0
+}
+
+.jqte_tool.jqte_tool_6 .jqte_tool_icon {
+    background-position: -88px 0
+}
+
+.jqte_tool.jqte_tool_7 .jqte_tool_icon {
+    background-position: -110px 0
+}
+
+.jqte_tool.jqte_tool_8 .jqte_tool_icon {
+    background-position: -132px 0
+}
+
+.jqte_tool.jqte_tool_9 .jqte_tool_icon {
+    background-position: -154px 0
+}
+
+.jqte_tool.jqte_tool_10 .jqte_tool_icon {
+    background-position: -176px 0
+}
+
+.jqte_tool.jqte_tool_11 .jqte_tool_icon {
+    background-position: -198px 0
+}
+
+.jqte_tool.jqte_tool_12 .jqte_tool_icon {
+    background-position: -220px 0
+}
+
+.jqte_tool.jqte_tool_13 .jqte_tool_icon {
+    background-position: -242px 0
+}
+
+.jqte_tool.jqte_tool_14 .jqte_tool_icon {
+    background-position: -264px 0
+}
+
+.jqte_tool.jqte_tool_15 .jqte_tool_icon {
+    background-position: -286px 0
+}
+
+.jqte_tool.jqte_tool_16 .jqte_tool_icon {
+    background-position: -308px 0
+}
+
+.jqte_tool.jqte_tool_17 .jqte_tool_icon {
+    background-position: -330px 0
+}
+
+.jqte_tool.jqte_tool_18 .jqte_tool_icon {
+    background-position: -352px 0
+}
+
+.jqte_tool.jqte_tool_19 .jqte_tool_icon {
+    background-position: -374px 0
+}
+
+.jqte_tool.jqte_tool_20 .jqte_tool_icon {
+    background-position: -396px 0
+}
+
+.jqte_tool.jqte_tool_21 .jqte_tool_icon {
+    background-position: -418px 0
+}
+
+.jqte_tool:hover {
+    background-color: #FFF;
+    border-color: #FFF
+}
+
+.jqte_tool:hover .jqte_tool_icon, .jqte_tool:hover .jqte_tool_label {
+    border: #AAA 1px solid
+}
+
+.jqte_tool:active .jqte_tool_icon, .jqte_tool:active .jqte_tool_label {
+    border: #777 1px solid
+}
+
+.jqte_tool.jqte_tool_1:hover .jqte_tool_icon, .jqte_tool.jqte_tool_1:active .jqte_tool_icon {
+    border: none
+}
+
+.jqte_tool_depressed {
+    background-color: #DDD;
+    border-color: #CCC
+}
+
+.jqte_tool_depressed .jqte_tool_icon {
+    border-color: #AAA
+}
+
+.jqte_tool_depressed:hover {
+    background-color: #EEE
+}
+
+/* link form area */
+.jqte_linkform {
+    padding: 5px 10px;
+    background: #DDD;
+    border-bottom: #BBB 1px solid;
+}
+
+.jqte_linktypeselect {
+    position: relative;
+    float: left;
+    width: 130px;
+    background: #EEE;
+    cursor: pointer
+}
+
+.jqte_linktypeselect:Active {
+    background: #FFF
+}
+
+.jqte_linktypeview {
+    padding: 3px 5px;
+    border: #333 1px solid;
+    color: #777;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    outline: none
+}
+
+.jqte_linktypetext {
+    font-size: 12px;
+}
+
+.jqte_linktypearrow {
+    position: absolute;
+    bottom: 8px;
+    right: 6px;
+    width: 7px;
+    height: 6px;
+    margin: 0 auto;
+    background: url("../images/rte.png") -7px -23px no-repeat;
+}
+
+.jqte_linktypes {
+    display: none;
+    position: absolute;
+    top: 22px;
+    left: 1px;
+    width: 125px;
+    background: #FFF;
+    border: #333 1px solid;
+    box-shadow: 0 1px 4px #AAA;
+    -webkit-box-shadow: 0 1px 4px #AAA;
+    -moz-box-shadow: 0 1px 4px #AAA
+}
+
+.jqte_linktypes a {
+    display: block;
+    padding: 4px 5px;
+    font-size: 12px;
+}
+
+.jqte_linktypes a:hover {
+    background: #DDD
+}
+
+.jqte_linkinput {
+    float: left;
+    margin: 0 5px;
+    padding: 3px 5px;
+    width: 300px;
+    background: #EEE;
+    border: #333 1px solid;
+    color: #777;
+    font-size: 12px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    outline: none;
+}
+
+.jqte_linkinput:focus, .jqte_linkinput:hover {
+    background: #FFF;
+    border-color: #000;
+}
+
+.jqte_linkbutton {
+    float: left;
+    padding: 3px 12px;
+    background: #AAA;
+    border: #333 1px solid;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    box-shadow: inset 0 1px #EEE;
+    -webkit-box-shadow: inset 0 1px #EEE;
+    -moz-box-shadow: inset 0 1px #EEE;
+}
+
+.jqte_linkbutton:hover {
+    background: #A1A1A1
+}
+
+.jqte_linkbutton:active {
+    box-shadow: inset 0 1px #CCC;
+    -webkit-box-shadow: inset 0 1px #CCC;
+    -moz-box-shadow: inset 0 1px #CCC;
+    background: #888;
+}
+
+/* text format menu */
+.jqte_formats {
+    display: none;
+    position: absolute;
+    width: 180px;
+    oveflow-x: hidden;
+    overflow-y: auto;
+    background: #FFF;
+    border: #AAA 1px solid;
+    box-shadow: 0 0 5px #AAA;
+    -webkit-box-shadow: 0 0 5px #AAA;
+    -moz-box-shadow: 0 0 5px #AAA;
+    z-index: 100;
+}
+
+.jqte_format {
+    display: block;
+    padding: 4px 7px;
+    font-size: 13px
+}
+
+.jqte_format:hover {
+    background: #DDD
+}
+
+.jqte_format_1, .jqte_format_2, .jqte_format_3, .jqte_format_4, .jqte_format_5, .jqte_format_6 {
+    font-weight: bold
+}
+
+.jqte_format_1 {
+    font-size: 22px
+}
+
+.jqte_format_2 {
+    font-size: 20px
+}
+
+.jqte_format_3 {
+    font-size: 18px
+}
+
+.jqte_format_4 {
+    font-size: 16px
+}
+
+.jqte_format_5 {
+    font-size: 14px
+}
+
+.jqte_format_6 {
+    font-size: 12px
+}
+
+.jqte_format_7 {
+    font-family: "Courier New", Courier, monospace
+}
+
+/* font size menu */
+.jqte_fontsizes {
+    display: none;
+    position: absolute;
+    width: 180px;
+    height: 200px;
+    oveflow-x: hidden;
+    overflow-y: auto;
+    background: #FFF;
+    border: #AAA 1px solid;
+    box-shadow: 0 0 5px #AAA;
+    -webkit-box-shadow: 0 0 5px #AAA;
+    -moz-box-shadow: 0 0 5px #AAA
+}
+
+.jqte_fontsize {
+    display: block;
+    padding: 3px 7px;
+}
+
+.jqte_fontsize:hover {
+    background: #DDD
+}
+
+/* color pallette */
+.jqte_cpalette {
+    display: none;
+    position: absolute;
+    padding: 6px;
+    width: 128px;
+    background: #FFF;
+    border: #AAA 1px solid;
+    box-shadow: 0 0 5px #AAA;
+    -webkit-box-shadow: 0 0 5px #AAA;
+    -moz-box-shadow: 0 0 5px #AAA
+}
+
+.jqte_color {
+    display: block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    border: #FFF 1px solid;
+}
+
+.jqte_color:hover {
+    border-color: #000
+}
+
+.jqte_colorSeperator {
+    float: none;
+    clear: both;
+    height: 7px;
+}
+
+/* editor area */
+.jqte_editor, .jqte_source {
+    padding: 10px;
+    background: #FFF;
+    /*min-height:100px;
+     max-height:500px;
+     max-height:900px;*/
+    overflow: auto;
+    outline: none;
+    word-wrap: break-word;
+    -ms-word-wrap: break-word;
+    /*resize:vertical;*/
+    height: 200px;
+}
+
+.jqte_editor div, .jqte_editor p {
+    margin: 0 0 7px
+}
+
+.jqte_editor a:link, .jqte_editor a:link * {
+    color: #0066FF !important;
+    text-decoration: underline;
+}
+
+.jqte_editor blockquote {
+    margin-top: 0;
+    margin-bottom: 7px
+}
+
+.jqte_editor img {
+    float: left;
+    margin: 0 10px 5px 0
+}
+
+.jqte_editor a[jqte-setlink], .jqte_editor a[jqte-setlink] * {
+    background: #3297FD !important;
+    color: #FFF !important
+}
+
+.jqte_editor h1, .jqte_editor h2, .jqte_editor h3, .jqte_editor h4, .jqte_editor h5, .jqte_editor h6, .jqte_editor pre {
+    display: block;
+    margin: 0 0 3px;
+}
+
+.jqte_editor h1, .jqte_editor h1 * {
+    font-size: 26px
+}
+
+.jqte_editor h2, .jqte_editor h2 * {
+    font-size: 24px
+}
+
+.jqte_editor h3, .jqte_editor h3 * {
+    font-size: 22px
+}
+
+.jqte_editor h4, .jqte_editor h4 * {
+    font-size: 20px
+}
+
+.jqte_editor h5, .jqte_editor h5 * {
+    font-size: 18px
+}
+
+.jqte_editor h6, .jqte_editor h6 * {
+    font-size: 15px
+}
+
+.jqte_editor pre, .jqte_editor pre * {
+    font-family: "Courier New", Courier, monospace
+}
+
+.jqte_source textarea {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    min-height: 100px;
+    font-family: Courier, Arial, sans-serif !important;
+    font-weight: normal;
+    font-size: 15px;
+    overflow: hidden !important;
+    outline: none;
+    resize: none;
+}
+
+.jqte_source textarea, .jqte_source textarea:focus {
+    css_shadow: none !important;
+    background: none !important;
+    border: none !important;
+}
+
+/* title box */
+.jqte_title {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+}
+
+.jqte_titleArrow {
+    position: relative;
+}
+
+.jqte_titleArrowIcon {
+    width: 7px;
+    height: 6px;
+    margin: 0 auto;
+    background: url("../images/rte.png") 0 -23px no-repeat;
+}
+
+.jqte_titleText {
+    padding: 5px 7px;
+    margin-top: 0;
+    min-width: 5px;
+    min-height: 1px;
+    max-width: 400px;
+    background: #000;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    word-wrap: break-word;
+    -ms-word-wrap: break-word
+}
+
+.jqte_titleText, .jqte_titleText * {
+    color: #FFF;
+    font-size: 11px
+}
+
+/* placeholder */
+.jqte_placeholder {
+    position: relative;
+    display: none;
+}
+
+.jqte_placeholder_text {
+    position: absolute;
+    top: 43px;
+    left: 10px;
+    font-size: 14px;
+    color: #CCC;
+}
+
+/*****************************END of RTE CSS****************************************************************/
+/***********************************Text Area****************************************************************/
+.app-auto-resize-teztarea {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    resize: none;
+    overflow: hidden;
+    max-height: 500px;
+    width: 100%;
+    padding: 0px;
+    border: 1px solid #CCCCCC;
+}
+
+/**********************************************************************************************************/
+.app-navigation{
+    background-image: -moz-linear-gradient(center bottom , #EBBF73 23%, #F5B649 62%, #F0B968 81%);
+    background: -webkit-linear-gradient(#EBBF73 23%, #F5B649 62%, #F0B968 81%);
+    color: #000000;float: left;
+}
+
+.app-border{
+    border:1px solid #CCCCCC;
+}
+
+/***************** WHEN COMPONENT ***********************************/
+.app-schedule-image{
+    background: url("../images/schedule.png") no-repeat scroll center center / 17px auto transparent;
+    border: medium none;
+    cursor: pointer;
+    height: 100%;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    width: 20px;
+}
+/***************** WHEN COMPONENT **********************************/

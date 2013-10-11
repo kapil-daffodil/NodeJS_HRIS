@@ -1,0 +1,833 @@
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+input {
+    outline: none;
+}
+
+.app-view {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.app-tool-bar {
+    display: table-row;
+    background: none repeat scroll 0 0 #F3F0EB;
+}
+
+/*
+.app-grid-view-container {
+    height: 100%;
+    display: table-row;
+}
+
+.app-grid-view {
+    position: relative;
+    height: 100%;
+}
+
+.gridStyle {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    bottom: 0px;
+    right: 0;
+    background: none repeat scroll 0 0 #F3F0EB;
+}
+.app-button {
+    padding: 4px 5px;
+    text-align: center;
+    white-space: nowrap;
+}
+*/
+
+.app-column-group {
+    padding: 0 10px;
+}
+
+.app-popup-title {
+    background-color: lightgray;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+}
+
+.app-popup-body {
+    padding: 5px
+}
+
+.app-busy-message-container {
+    z-index: 1000000;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+.app-busy-message {
+    margin: 0 auto;
+    margin-top: 5px;
+    background-color: red;
+    color: white;
+    display: table;
+    padding: 2px;
+}
+
+.app-user {
+    /**User Name and Sign Out option In Header**/
+    float: right;
+    padding: 20px 5px 5px 5px;
+    cursor: pointer;
+
+}
+
+.app-user-spearator {
+
+}
+
+.app-user-name {
+
+}
+
+/** APP COLLECTION**/
+
+.app-action-collection {
+    display: inline;
+}
+
+.app-action-collection-option {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    white-space: nowrap;
+}
+
+.app-action-collection-setting-parent {
+    display: inline;
+    padding: 5px 0px 5px 5px;
+}
+
+.app-action-collection-down-arrow-parent {
+    display: inline;
+    padding: 5px 0px 5px 5px;
+}
+
+.app-action-collection-down-arrow-image {
+    width: 12px;
+    height: 12px;
+}
+
+.applane-logo {
+    /**--Applane Logo in Header---**/
+    float: left;
+    padding: 10px;
+}
+
+.ngRow:hover {
+    background-color: #EAEAEA;
+}
+
+.columns-group-parent {
+    /*margin: 15px 30px;*/
+}
+
+.columns-group-label {
+    background: none repeat scroll 0 0 #a9a9a9;
+    color: white;
+    font-size: 15px;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+.two-divs {
+    width: 50%;
+}
+
+.three-divs {
+    width: 30%;
+}
+
+.four-divs {
+    width: 25%;
+}
+
+.five-divs {
+    width: 20%;
+}
+
+.ref-container {
+    position: relative;
+    border: 1px solid #CCCCCC;
+
+}
+
+.ref-input-container {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 20px;
+
+}
+
+.ref-input {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+.ref-button {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    bottom: 0px;
+    width: 20px;
+    background: url("../images/down_arrow_new.png") no-repeat scroll center center / 10px auto transparent;
+    border: none;
+}
+
+.duration-container {
+    position: relative;
+    border: 1px solid #CCCCCC;
+}
+
+.duration-time-container {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 2px;
+    right: 60px;
+}
+
+.duration-input {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+.duration-ref-container {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    bottom: 2px;
+    width: 60px;
+}
+
+.applied-search-filter-input {
+    float: left;
+    height: 24px;
+    margin: 0 0 15px 10px;
+}
+
+.app-sign-out {
+    /** Applane Sign out element **/
+    padding-right: 19px;
+}
+
+.app-view-container {
+
+}
+
+/**** APP BUTTON STYLE : FOR ALL BUTTON****/
+
+.app-button-padding {
+    padding: 2px 8px;
+}
+
+.app-button-margin {
+    margin: 2px;
+}
+
+.app-button {
+    background-color: #F3F3F3;
+    background-image: linear-gradient(to bottom, #FFFFFF, #E6E6E6);
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #B3B3B3;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    text-shadow: 1px 1px white;
+    vertical-align: middle;
+}
+
+.app-button-border {
+    border-radius: 3px 3px 3px 3px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.app-button-shadow {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    -o-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.app-button:hover {
+    background-image: linear-gradient(to bottom, #F3F3F3, #E6E6E6);
+    -webkit-background-image: linear-gradient(to bottom, #F3F3F3, #E6E6E6);
+    -o-background-image: linear-gradient(to bottom, #F3F3F3, #E6E6E6);
+    -moz-background-image: linear-gradient(to bottom, #F3F3F3, #E6E6E6);
+}
+
+/****Applied Filter on App Tool Bar****/
+
+.app-applied-filter-label {
+    display: inline;
+    padding-right: 5px;
+}
+
+.app-remove-filter {
+    display: inline;
+    font-size: 11px;
+    padding: 0 0px 0 2px;
+}
+
+/****App View*****/
+
+.app-view-wrapper {
+    background: none repeat scroll 0 0 #F3F0EB;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+}
+
+/*** Applane Datepicker ****/
+
+.app-grid-date-picker-calender-image {
+    width: 19px;
+    background-image: url("../images/calender.png");
+    border: none;
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    height: 18px;
+    background-size: 15px auto;
+    right: 2px;
+    top: 4px;
+}
+
+.app-grid-datepicker-parent {
+    position: relative;
+    min-height: 20px;
+}
+
+.app-grid-date-picker-input {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    border: 0px none;
+    right: 0px;
+    left: 0px;
+    height: 100%;
+    padding: 0px;
+}
+
+.datepicker-parent-div {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #CCCCCC;
+    min-height: 20px;
+    position: relative;
+}
+
+.datepicker-input-parent {
+    border: 0 none;
+    bottom: 2px;
+    left: 2px;
+    position: absolute;
+    right: 28px;
+    top: 0;
+}
+
+.datepicker-input-parent input[type="text"] {
+    border: medium none;
+    height: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+.datepicker-calender-image {
+    background-color: white;
+    background-image: url("../images/calender.png");
+    background-repeat: no-repeat;
+    background-size: 16px auto;
+    border: medium none;
+    position: absolute;
+    right: 4px;
+    top: 1px;
+    width: 16px;
+}
+
+/**** Applane Grid ****/
+
+.applane-grid-body tr:hover .app-row-action-arrow {
+    background: url("../images/row-action-arrow.png") no-repeat scroll center center transparent;
+    background-position: 1px 2px;
+}
+
+.applane-grid-body tr:focus .app-row-action-arrow {
+    background: url("../images/row-action-arrow.png") no-repeat scroll center center transparent;
+    background-position: 1px 2px;
+}
+
+.app-grid {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.applane-grid {
+    empty-cells: show;
+}
+
+.applane-grid-header {
+    empty-cells: show;
+    border-top: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    background-color: #E6E6E6;
+    color: #0B75D1;
+}
+
+.applane-grid-header th {
+    border-right: 1px solid #CCCCCC;
+    font-weight: normal;
+    height: 25px;
+}
+
+.applane-grid-body {
+    empty-cells: show;
+    border-top: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+}
+
+.applane-grid-body td {
+    border-right: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.applane-grid-cell-focus {
+    box-shadow: 0 0 8px 1px #777777;
+    -moz-box-shadow: 0 0 8px 1px #777777;
+    -o-box-shadow: 0 0 8px 1px #777777;
+    -webkit-box-shadow: 0 0 8px 1px #777777;
+}
+
+.applane-grid-body tr:hover {
+    /*background-color: #E6E6E6;*/
+}
+
+.applane-grid td {
+    overflow: hidden;
+}
+
+.applane-grid th {
+    overflow: hidden;
+}
+
+.applane-grid-cell {
+
+}
+
+.app-selected-tr {
+    background-color: #d3d3d3 !important;
+}
+
+.app-selected-tr .app-row-action-arrow {
+    background: url("../images/row-action-arrow.png") no-repeat scroll center center transparent;
+    background-position: 1px 2px;
+
+}
+
+.applane-grid-cell:focus {
+    background-color: #a9a9a9;
+    /*box-shadow: 0 0 8px 1px #777777;*/
+    /*-moz-box-shadow: 0 0 8px 1px #777777;*/
+    /*-o-box-shadow: 0 0 8px 1px #777777;*/
+    /*-webkit-box-shadow: 0 0 8px 1px #777777;*/
+    outline: medium none;
+}
+
+.applane-grid-row-even {
+    background-color: #F5F5F5;
+}
+
+.applane-grid-row-odd {
+    background-color: #FFFFFF;
+}
+
+.applane-grid-cell-inner {
+    /* Padding issue in Mozzila browser, this property works only in mozzila */
+    -moz-padding-start: 1px;
+}
+
+.applane-grid-cell input[type="text"] {
+}
+
+/** Applane Menus **/
+
+.app-menu-container-background {
+    /*    background-image: url("../images/menu-background.jpg");*/
+    background-repeat: repeat;
+    background: none repeat scroll 0 0 #6495ED;
+}
+
+.app-menu-container-border {
+    border: 1px solid darkGray;
+}
+
+.app-menu {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.app-menu:hover {
+    background: none repeat scroll 0 0 #F5B549;
+}
+
+.app-menu-border {
+    border-right: 1px solid #7EB8F1;
+}
+
+.app-menu-padding {
+    padding: 3px 7px;
+}
+
+.app-menu-bold-font {
+    font-weight: bold;
+}
+
+.app-panel-cell {
+    width: 50% !important;
+    float: left;
+    margin-bottom: 15px;
+}
+
+/**  Applane Panel  **/
+
+.app-panel-full-row {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+}
+
+.app-panel-half-row {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+
+.app-panel-label {
+    float: left;
+    width: 120px;
+    text-align: right;
+    word-wrap: break-word;
+}
+
+.app-panel-input-parent {
+    margin: 0 0 15px 10px;
+    float: left;
+}
+
+.app-panel {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.app-panel-input {
+    border: 1px solid #CCCCCC;
+    padding: 5px !important;
+    width: 187px;
+}
+
+.app-panel-arrows-parent {
+    float: left;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+/** Applane Setting **/
+
+.app-setting {
+    display: inline;
+    height: 16px;
+    vertical-align: middle;
+    width: 16px;
+}
+
+.app-row-action-arrow {
+}
+
+.app-container {
+    display: table-row;
+    height: 100%;
+}
+
+.app-wrapper {
+    height: 100%;
+    position: relative;
+}
+
+.app-wrapper-child {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #EAEAEA;
+}
+
+.app-wrapper-child-overflow {
+    overflow-x: auto;
+    overflow-y: scroll;
+}
+
+/** Applane Default Button **/
+
+.app-bar-button {
+    float: left;
+    min-height: 23px;
+    width: 28px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.app-close-button {
+    background: url("../images/close_img.png") no-repeat center center / 20px auto transparent;
+}
+
+.app-close-button:hover {
+    background: url("../images/close_img_hover.png") no-repeat center center / 20px auto transparent;
+}
+
+.app-refresh-button {
+    background: url("../images/refresh_btn_img.png") no-repeat center center / 20px auto transparent;
+}
+
+.app-refresh-button:hover {
+    background: url("../images/refresh_btn_img_hover.png") no-repeat center center / 20px auto transparent;
+}
+
+.app-bar-button:hover {
+    float: left;
+    min-height: 23px;
+    width: 28px;
+}
+
+.app-delete-button {
+    background: url("../images/delete_img.png") no-repeat scroll center center / 20px auto transparent;
+}
+
+.app-delete-button:hover {
+    background: url("../images/delete_img_hover.png") no-repeat scroll center center / 20px auto transparent;
+}
+
+.app-save-button {
+    background: url("../images/save_img.png") no-repeat scroll center center / 20px auto transparent;
+}
+
+.app-save-button:hover {
+    background: url("../images/save_img_hover.png") no-repeat scroll center center / 20px auto transparent;
+}
+
+.app-column-view-button {
+    background: url("../images/column_view.png") no-repeat scroll center center / 17px auto transparent;
+}
+
+.app-insert-button {
+    background: url("../images/insert.png") no-repeat scroll center center / 14px auto transparent;
+}
+
+.app-bar-basic {
+    float: left;
+    background: #a9a9a9;
+}
+
+.app-height-auto{
+    height: auto !important;
+}
+
+.app-bar-metadata {
+    float: right;
+    padding: 0px 10px;
+    background: #a9a9a9;
+}
+
+.app-bar-quickview {
+    float: left;
+    padding: 2px 10px;
+    background: none repeat scroll 0 0 #d3d3d3;
+}
+
+.app-child-view-button {
+    background: url("../images/rows.png") no-repeat scroll center center / 13px auto transparent;
+}
+
+.app-filter-view-button {
+    background: url("../images/filter.gif") no-repeat scroll center center / 13px auto transparent;
+}
+
+.app-bar-quickview-wrapper {
+    min-height: 19px;
+}
+
+/**** APP MULTI-REFRENCE ****/
+
+.app-multirefrence-text {
+    float: left;
+    margin-right: 5px;
+}
+
+.app-multirefrence-parent {
+    background: none repeat scroll 0 0 lightgray;
+    border: 1px solid darkgray;
+    border-radius: 2px;
+    float: left;
+    font-size: 12px;
+    margin: 3px 0 3px 3px;
+    padding: 2px 5px;
+}
+
+.app-multirefrence-cross {
+
+}
+
+.app-multi-refrence-down-arrow {
+    background: url("../images/down_arrow_new.png") no-repeat scroll center center / 10px auto transparent;
+    border: medium none;
+    cursor: pointer;
+    float: right;
+    margin-right: 8px;
+    width: 8px;
+}
+
+.app-multi-refrence-loading-image {
+    /** on Multirefrence Loading Image shows in the input texr**/
+    float: left;
+
+    padding-top: 5px;
+}
+
+.app-input-loading-image {
+    position: absolute;
+    right: 0;
+    top: 7px;
+}
+
+/*** APP GROUP TABLE ***/
+
+.app-group-table-arrow-parent {
+    width: 10px;
+}
+
+.app-group-table-arrow{
+    background: url("../images/right-solid-arrow.png") no-repeat scroll center center / 10px auto transparent;
+    width: 10px;
+    cursor: pointer;
+    height: 20px;
+}
+
+.app-group-table-arrow-false {
+
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+
+    transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    -moz-transition: .5s;
+}
+
+.app-group-table-arrow-true {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+
+    transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    -moz-transition: .5s;
+}
+
+
+
+/**** APPLANE DEFAULT CLASSES *******/
+.app-bottom-position-zero {
+    bottom: 0;
+}
+
+.app-top-position-zero {
+    top: 0;
+}
+
+.app-overflow-auto {
+    overflow: auto;
+}
+
+.app-position-absolute {
+    position: absolute;
+}
+
+.app-width-full {
+    width: 100%;
+}
+
+.app-button-padding{
+    padding: 5px 9px;
+}
+
+.app-font-weight-bold{
+    font-weight: bold;
+}
+
+
+.app-text-align-center{
+    text-align: center;
+}
+
+.app-float-left {
+    float: left;
+}
+
+.app-width-auto {
+    width: auto;
+}
+
+.app-vertical-align-top {
+    vertical-align: top;
+}
+
+.app-box-shadow {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+.app-header-background-color {
+    background: #d3d3d3;
+}
+.app-dark-gray-backgroud-color{
+    background: #a9a9a9;
+}
+
+.app-group-tr-false{
+    background: none repeat scroll 0 0 #EAEAEA;
+}

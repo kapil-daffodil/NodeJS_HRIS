@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Appnumber</title>
+    <script src="js/angular.js"></script>
+    <script type="text/javascript">
+        var appStrapDirectives = angular.module('$appModule', []);
+    </script>
+    <script src="js/apputil.js"></script>
+    <script src="js/appnumber.js"></script>
+
+    <script type="text/javascript">
+        var app = angular.module('applane', ['$appModule'], function ($routeProvider, $locationProvider) {
+            $locationProvider.html5Mode(true);
+        });
+
+
+        app.controller('AppCtrl', function ($scope) {
+            $scope.student = {"rollno":123};
+
+        });
+
+
+    </script>
+</head>
+<body ng-app="applane" ng-controller="AppCtrl">
+<app-number model='student' field='rollno'></app-number>
+<app-number model='student' field='marks'></app-number>
+<app-number model='student' field='class.sr'></app-number>
+{{ student | json }}
+</div>
+</body>
+</html>

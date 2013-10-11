@@ -1,0 +1,141 @@
+Locations
+    location : Suncity, Sec33
+financial-year
+    currency financial year
+Accounts
+    name
+    accountgorupid
+AccountGroups
+    name
+    parentAccountGroup
+    Revenue    1
+    Expense
+
+    Operation Revenue       Revenue         2
+    Non Oper Reveneue       Revene
+
+    Export incom            Oper revenue    3
+    Domestic income         Opera revenue   4
+
+    Bound Income            Non opr income
+
+Voucher
+    number : Auto generated
+        daffodil/location/financial-year/1.2.3….
+    date
+    vli
+        accountid
+        debit  : currency
+        credit : currency
+        sum(debit) = sum(credit)
+Ledger
+    Filter : Rohit   Date July 2013
+        Date        Narration          Debit       Credit      Closing
+        1 July      OpeningBalance      500                     500(Dr)
+        10July      Salay paid                      6000        5500(Cr)
+
+        =============================================================
+                                        500         6000      5500(Cr)
+Profit & Loss
+    Date : July 2013
+    start : 1 July
+    End  : 31 July
+
+    Revenue
+        Operation Income                                5000
+        if negative then show in bracket ()
+
+Trail Balance
+    30 june closing balance and all acitivities of july
+    Income
+    Expenpense
+    Asset
+    Liabliity
+BalanceSheet July 2013
+
+
+
+=====================================================
+Ledger
+
+date : July
+account : Rohit
+
+query : table:vouchers voucherdate=july vli.accountid=rohit
+
+v.date  v.narration   vli.debit vli.credit      closing balance
+
+extra fields
+    closing balance with each vli
+extra row opening balance
+
+aggregates
+    accounts    date    debit   credit
+We need support for aggregate module so that if we pass a date and columns then it will give us aggregate
+    calculate  year, month, day and return us
+    debit : 400
+    credit  300
+Aggregate will be kept for
+    Day Month Year
+If some voucher inserted/updated deleted ==> day ==>, month ==> year will be calculated again
+
+Need to add a row in data : upon calculate and then add a column closing balance.
+we have to iterate data in after query
+
+===============================================================
+Profit and Loss (July)
+
+we required + and - support in table => expand and collapse, data will be acquire for top groups only with one level
+
+                              Dr                  Cr
+-  Income                                       40000
+    - Direct Income                             35000
+          Foreign                               25000
+          Domestic                              10000
+     Indirect Income                            5000
+
++   Expense
+
+
+Query : Account Groups
+
+      getdata from accountgroupstotal
+
+In total we have to provide a start date and end date , total of both this column is required only
+
+=========================================================================
+Trial Balance       OpeningBalance      Debit   Credit  ClosingBalance
+Income                  4000(Cr)                1000    5000(cr)
+Expense
+Assets
+Liablity
+We can use account group total
+    Total for opening balance and given date
+
+
+WE HAVE TO KEEP AGGREGATE FOR (YEAR | MONTH | DAY) for ACCOUNT, ACCOUNTGROUP
+We can use same table but have to keep a column span --> day, month, year every month and year will have start date saved for that column
+
+irrespect of old or delete value
+--> we can use map reduce for aggregates run aggregate for
+--> when map reduce is running, application will go in non operate mode
+----> we can run map reduce one time for each day, user can manually trigger this event with time(day, month or year)
+
+IF we do some changes in old records -> and table is aggregate enable, then we have to keep some variable where we need to run map reduce job for that day
+doing this, if no changes done in a day, then no map reduce will fire for that day
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+

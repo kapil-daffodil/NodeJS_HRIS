@@ -1,0 +1,48 @@
+<!doctype HTML>
+
+        <html ng-app>
+            <head>
+                <script src="js/jquery.js" type="text/javascript"></script>
+                <script src="js/angular.js" type="text/javascript"></script>
+                <style>
+                    ul,li{list-style: none;}
+                    body, ul{margin: 0;padding: 0px;}
+                    #slideId{display: none;background: red;}
+                </style>
+                <script type="text/javascript">
+
+                  function CTL($scope){
+                      $scope.slideDown = false;
+
+                      $scope.slide = function(){
+                          $scope.slideDown = !$scope.slideDown;
+
+                         if($scope.slideDown){
+                             $('#slideId').slideDown('slow');
+
+                         }else{
+                             $('#slideId').slideUp('slow');
+
+                         }
+                      }
+                  }
+
+                </script>
+            </head>
+
+            <body>
+                <div ng-controller="CTL">
+                    <div  ng-click="slide()" >Click Me to Slide Down</div>
+                    <div id="slideId">
+                         <ul>
+                             <li>One</li>
+                             <li>Two</li>
+                             <li>Three</li>
+                         </ul>
+                    </div>
+
+                </div>
+
+            </body>
+
+        </html>

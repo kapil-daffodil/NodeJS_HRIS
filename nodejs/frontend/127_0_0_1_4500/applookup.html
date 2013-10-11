@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/applane.css"/>
+    <link rel="stylesheet" type="text/css" href="css/advancesearch.css"/>
+    <link href="css/bootstrap-datepicker.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/applane-strap_beta.js"></script>
+
+    <script type="text/javascript">
+        var app = angular.module('applane', ['$appModule'], function ($routeProvider, $locationProvider) {
+            $locationProvider.html5Mode(true);
+        });
+
+        app.controller('AppCtrl', function ($scope, $location, $timeout, $appDataSource) {
+            $scope.student = {subjects:[
+                {classid:{_id:1, id:"IV"}, actors:["Rohit"]}
+            ], "name":"Rohit Bansal", "nationality":"Indian", "tags":["JAVA", "PHP"], teachers:[], "motherid":{_id:1, id:"XYZ"}};
+            $scope.nationalityds = ["Indian", "Britainian"];
+            $scope.fruitsds = ["Bnana", "Apple", "Orange"];
+            $scope.tagds = ["JAVA", "PHP", "NODEJS", "ANGULAR"];
+            $scope.fatherds = new $appDataSource.getLookupDataSource({"table":"applications__baas", "primarycolumns":[
+                {"expression":"id"}
+            ], "ask":"baas"});
+        });
+
+
+    </script>
+
+</head>
+
+<body ng-app="applane" ng-controller="AppCtrl">
+
+
+{{ student | json }}
+
+
+<br><br><br><br><br>
+<app-lookup style="width:200px;height: 30px;" datasource='tagds' model='student'
+field='tags'></app-lookup>
+<br><br><br><br><br>
+
+<app-lookup style="width:200px;height: 30px;" model='student' field='favouritefoods' dataSource='fruitsds'
+multiple=true></app-lookup>
+<br><br><br> <br><br><br>
+<app-lookup style="width:200px;height: 30px;"
+model='student' field='fatherid.id' dataSource='fatherds'></app-lookup>
+<br><br><br><br><br><br>
+<app-lookup style="width:200px;height: 30px;"
+model='student' field='teachers.id' dataSource='fatherds'></app-lookup>
+<br><br><br><br><br><br>
+<app-lookup style="width:200px;height: 30px;"
+model='student' field='nationality' dataSource='nationalityds'></app-lookup>
+<br><br><br> <br><br><br>
+<app-lookup style="width:200px;height: 30px;"
+model='student' field='motherid.id' dataSource='fatherds'></app-lookup>
+
+<br><br><br> <br><br><br>
+<app-lookup style="width:200px;height: 30px;"
+model='student.subjects[0]' field='classid.id' dataSource='fatherds'></app-lookup>
+
+<br><br><br> <br><br><br>
+<app-lookup style="width:200px;height: 30px;"
+model='student.subjects[0]' field='mclassid.id' dataSource='fatherds'></app-lookup>
+
+<br><br><br> <br><br><br>
+<app-lookup style="width:200px;height: 30px;"
+model='student.subjects[0]' field='actors' dataSource='nationalityds'></app-lookup>
+
+
+<br><br><br> <br><br><br>
+<app-lookup style="width:200px;height: 30px;"
+            model='student.subjects[0]' field='actress' dataSource='nationalityds'></app-lookup>
+
+
+</body>
+</html>

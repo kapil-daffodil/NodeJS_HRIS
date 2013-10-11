@@ -1,0 +1,38 @@
+<html>
+<head>
+
+    <script type="text/javascript" src="../jquery.js"></script>
+    <script type="text/javascript" src="../angular.js"></script>
+    <script type="text/javascript" src="textarea.js"></script>
+
+   <style>
+       .app-auto-resize-teztarea{
+           -moz-box-sizing : border-box;
+           -webkit-box-sizing : border-box;
+           resize: none;
+           overflow: hidden;
+           /*max-height: 150px;*/
+           width: 200px;
+       }
+   </style>
+    <script type="text/javascript">
+        webApp.controller('textarea', function ($scope, $location, $timeout) {
+            $scope.pageTempalte = {"template":"hello"};
+
+        });
+    </script>
+</head>
+
+<body ng-controller="textarea" ng-app="webApp">
+
+
+<textarea-auto-resize model='pageTempalte' field='template'></textarea-auto-resize>
+
+
+
+
+{{pageTempalte | json}}
+
+
+</body>
+</html>

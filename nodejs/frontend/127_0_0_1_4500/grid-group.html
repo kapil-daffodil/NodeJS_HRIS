@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap_beta.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/applane_beta.css"/>
+    <link rel="stylesheet" type="text/css" href="css/advancesearch_beta.css"/>
+    <link href="css/bootstrap-datepicker.css" rel="stylesheet"/>
+
+    <style>
+        .grid-scroll {
+            overflow-X: auto;
+            overflow-y: scroll;
+        }
+
+        .app-right-down-arrow-transform {
+            transform: rotate(126deg);
+            -webkit-transform: rotate(126deg);
+            -moz-transform: rotate(126deg);
+            transition: all .1s ease-in-out;
+            -webkit-transition: all .1s ease-in-out; /** Chrome & Safari **/
+            -moz-transition: all .1s ease-in-out; /** Firefox **/
+            -o-transition: all .1s ease-in-out; /** Opera **/
+        }
+
+        .app-right-arrow-transform {
+            transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            transition: all .1s ease-in-out;
+            -webkit-transition: all .1s ease-in-out; /** Chrome & Safari **/
+            -moz-transition: all .1s ease-in-out; /** Firefox **/
+            -o-transition: all .1s ease-in-out; /** Opera **/
+        }
+
+    </style>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/bootstrap_beta.js"></script>
+    <script type="text/javascript" src="js/appgrid.js"></script>
+
+    <script type="text/javascript">
+        var app = angular.module('applane', ['$appstrap.directives'], function ($routeProvider, $locationProvider) {
+            $locationProvider.html5Mode(true);
+        });
+
+        app.controller('AppCtrl', function ($scope, $location, $timeout) {
+            //_mode_ = -1,0,1, -1 do not show, 0 - collapse (+),  1 - Exapnd(-)
+            //make a new column type -> controll , expression base
+            //set colspan
+            //we will kep cospan  =1 by default, and will set colspan = no of columns for group enabled row
+            //username_mode is of conroll type
+            //priority_mode is of controll type
+            //now username : Rohit count  : 2
+
+            $scope.tasks = {data:[
+                {"username":"Rohit Bansal", count:2, username_mode:0, _group_:0, style:{"border-right":"1px solid rgba(0, 0, 0, 0)"}, _display_:true, _id:0},
+                {"username":"Rohit Bansal", "priority":"High", count:2, priority_mode:0, _group_:1, style:{"border-right":"1px solid rgba(0, 0, 0, 0)"}, _display_:false, parentgroup:0, _id:1},
+                {shortDesc:"Task1", "username":"Rohit Bansal", "priority":"High", _display_:false, parentgroup:1, _id:2, "time":"10hrs"},
+                {shortDesc:"Task5", "username":"Ashish Jain", "priority":"Low", _display_:false, parentgroup:1, _id:9, "time":"11hrs"},
+                {shortDesc:"Task5", "username":"Ashish Jain", "priority":"Low", _display_:false, parentgroup:1, _id:9, "time":"12hrs"},
+                {shortDesc:"Task5", "username":"Ashish Jain", "priority":"Low", _display_:false, parentgroup:1, _id:9, "time":"12hrs"},
+                {shortDesc:"Task5", "username":"Ashish Jain", "priority":"Low", _display_:false, parentgroup:1, _id:9, "time":"12hrs"},
+                {shortDesc:"Task5", "username":"Ashish Jain", "priority":"Low", _display_:false, parentgroup:1, _id:9, "time":"12hrs"},
+                {shortDesc:"Task5", "username":"Ashish Jain", "priority":"Low", _display_:false, parentgroup:1, _id:9, "time":"12hrs"},
+                {shortDesc:"Task5", "username":"Ashish Jain", "priority":"Low", _display_:false, parentgroup:1, _id:9, "time":"11hrs"},
+                {shortDesc:"Task5", "username":"Ashish Jain", "priority":"Low", _display_:false, parentgroup:1, _id:9, "time":"12hrs"},
+                {shortDesc:"Task5", "username":"Ashish Jain", "priority":"Low", _display_:false, parentgroup:1, _id:9, "time":"12hrs"},
+                {shortDesc:"Task5", "username":"Ashish Jain", "priority":"Low", _display_:false, parentgroup:1, _id:9, "time":"12hrs"},
+                {shortDesc:"Task5", "username":"Ashish Jain", "priority":"Low", _display_:false, parentgroup:1, _id:9, "time":"12hrs"}
+
+            ]}
+            var columns = [
+                {expression:"username_mode", label:"", type:"mode", width:25, overflow:true} ,
+                {expression:"priority_mode", label:"", type:"mode", width:25, overflow:true} ,
+                {expression:"shortDesc"} ,
+                {expression:"username"} ,
+                {expression:"priority"},
+                {expression:"time"}
+            ];
+
+            var appliedGroups = [
+                {expression:"username", columns:[
+                    {expression:"username"},
+                    {expression:"count"}
+                ]},
+                {expression:"priority", width:400, columns:[
+                    {expression:"priority"},
+                    {expression:"count"}
+                ]}
+
+            ];
+            var toolbar = ["refresh", "delete", "save"];
+            $scope.gridOptions = {data:"tasks.data", columns:columns, scrollable:true, id:"1", idColumn:"_id", toolbar:toolbar, appliedGroups:appliedGroups};
+
+        });
+
+
+    </script>
+
+</head>
+
+<body ng-app="applane" ng-controller="AppCtrl" style="margin: 5px">
+
+<div style="height: 350px; width : 800px ;background-color: #d0d9df;border: 1px solid #000000">
+    <app-grid></app-grid>
+</div>
+
+
+</body>
+</html>

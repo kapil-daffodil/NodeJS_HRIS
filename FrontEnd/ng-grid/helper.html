@@ -1,0 +1,27 @@
+<!doctype HTML>
+<html ng-app="applane">
+<head lang="en">
+    <meta charset="utf-8">
+    <title>Node js helper</title>
+
+    <link rel="stylesheet" type="text/css" href="css/helper.css">
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src='js/helper.js'></script>
+
+</head>
+<body ng-controller="AppCtrl">
+<textarea ng-model="query" style="width:95%;height: 200px;margin: 10px;"></textarea>
+<input type="button" value="Query" ng-click="getdata('query')" style="margin-left: 10px;margin-bottom: 10px;"/>
+<!--<input type="button" value="Insert" ng-click="getdata('insert')" style="margin-left: 10px;margin-bottom: 10px;"/>-->
+<input type="button" value="Mongo Update" ng-click="getdata('update')" style="margin-left: 10px;margin-bottom: 10px;"/>
+<input type="button" value="Remove" ng-click="getdata('remove')" style="margin-left: 10px;margin-bottom: 10px;"/>
+<input type="button" value="Update" ng-click="getdata('bassupdate')" style="margin-left: 10px;margin-bottom: 10px;"/>
+<input type="button" value="Table" ng-click="getdata('table')" style="margin-left: 10px;margin-bottom: 10px;"/>
+<input type="button" value="Update sample" ng-click="sample('update')" style="margin-left: 10px;margin-bottom: 10px;"/>
+<input type="button" value="Generate view" ng-click="getdata('generateview')" style="margin-left: 10px;margin-bottom: 10px;"/>
+<input type="button" value="Clear Cache" ng-click="getdata('cachekey')" style="margin-left: 10px;margin-bottom: 10px;"/>
+<app-data-table></app-data-table>
+</body>
+</html>

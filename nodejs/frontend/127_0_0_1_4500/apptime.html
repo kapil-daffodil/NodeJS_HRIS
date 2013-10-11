@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AppTime</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/applane.css"/>
+    <link rel="stylesheet" type="text/css" href="css/advancesearch.css"/>
+    <link href="css/bootstrap-datepicker.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="js/angular.js"></script>
+    <script type="text/javascript">
+        var appStrapDirectives = angular.module('$appModule', []);
+        appStrapDirectives.factory('$dataModel', ['$http', '$timeout', '$rootScope',
+            function ($http, $timeout, $rootScope) {
+                var $dataModel = {};
+                $dataModel.getCurrentRow = function () {
+
+                }
+                $dataModel.getView = function () {
+
+                }
+                return $dataModel;
+
+            }
+        ]);
+    </script>
+
+
+
+    <script type="text/javascript" src="js/apputil.js"></script>
+    <script src="js/applookup.js"></script>
+    <script src="js/apptime.js"></script>
+    <script type="text/javascript">
+        var app = angular.module('applane', ['$appModule'], function ($routeProvider, $locationProvider) {
+            $locationProvider.html5Mode(true);
+        });
+        app.controller('AppCtrl', function ($scope, $location, $timeout, $appDataSource) {
+            $scope.attendance = {intime:"12:30 AM"};
+        });
+
+    </script>
+</head>
+<body ng-app="applane">
+<div ng-controller="AppCtrl">
+    {{attendance | json}}
+    <app-time model='attendance' field='intime'></app-time>
+    <app-time model='attendance' field='outtime'></app-time>
+    <div id="app_popup"></div>
+
+</div>
+</body>
+</html>

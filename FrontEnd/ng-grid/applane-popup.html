@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/popup.js"></script>
+    <script type="text/javascript">
+        function showPopup(elem, modal) {
+            var p = new Popup(!modal, modal, function (open) {
+
+            });
+
+            p.setHTML("<table border=1><tr><td>Rohit Bansal</td></tr></table>");
+//            p.setPosition(100, 200);
+
+
+            if(!elem){
+                p.center();
+            }
+
+            p.setEscEnabled(!modal);
+
+            p.showPopup(elem);
+//            p.show();
+            return p;
+        }
+    </script>
+    <style>
+        .popupContainer {
+            background-color: rgba(0, 0, 0, 0.6);
+            position: fixed;
+        }
+
+        .popupwrapper {
+            position: absolute;
+            z-index: 9998;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="Show Auto Popup" onclick="showPopup(null,false)"/>
+<input type="button" value="Show Modal Popup" onclick="showPopup(null,true)"/>
+<div style="width: 100px;height: 100px;position: absolute;left: 200px;top:100px;">
+    <div style="position:relative;width: 100%;">
+
+            <div onclick="showPopup(this,false)" style="border: 1px solid #808080;width: 500px;height: 1000px;"> Kumar bansla</div>
+
+    </div>
+
+</div>
+
+
+<p>
+    This is popup demo.This is popup demoThis is popup demoThis is popup demoThis is popup demoThis is popup demoThis is
+    popup demoThis is popup demo
+</p>
+
+</body>
+</html>

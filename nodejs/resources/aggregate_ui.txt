@@ -1,0 +1,136 @@
+aggregate in table
+
+aggregate will come in data
+
+display table row on this basis
+
+show aggregate unit :
+    Hrs  Minutes
+Do we need to show duration in other column also
+
+===>
+    Data Model will listen data
+        check which data get changed
+
+        check if column has aggregate
+
+        get old value
+        get new vlaue
+        calculate aggregate
+
+        case should be considered for nested table
+
+            ==> Show aggregate , then do work for currency conversion ==> assuming conversion value is available at client side
+==============
+    Server side
+        task        owner   estimatedhrs        completedhrs
+        A           Rohit   12 hrs              1 day
+        B           Rohit   1 Day               12 Hrs
+
+        {
+        table : tasks
+        columns [{expressionestimated : hrs, aggregate:sum},{expression:completehrs, aggregate:sum}]
+        }
+
+        type of expressionestimated
+            number
+            currency
+            duration
+                estimatedhrs.time
+                estimatedhrs.timeunit
+
+        db.tasks.aggregate(
+        [ {match query}
+          {$project:{$estimatedhrs.timeunit:1,$estimatedhrs.time :1}}
+          { $group : {
+                       _id : "$estimatedhrs.timeunit", "completedhrs.timeunit"
+                       total : { $sum : "$estimatedhrs.time" }
+            } },
+
+
+         ]
+
+
+
+
+          12 hrs
+          2 days
+          60 minutes
+
+          ==> convert to hrs
+             ==>
+
+
+
+         completehrs : 24 hrs, estimatdhrs : 24 hrs
+
+
+
+        voucher
+            vli : object
+                vli.debit : currency
+                vli.credit  :currency
+
+        query:
+            table : vouchers
+            columns : sr.no, date, narration, vli:[{},{}]
+            moduleparameters:{
+                aggregates:
+            }
+
+
+
+===============================================================================================================================
+Order by components
+
+Query : orders will come on data : []
+
+column header will be binding with meta data with some order by expression : if that get chagnes so will it
+
+Order components
+    Lookup with option showing labels of all columns
+    Asc /Desc box
+
+orders values will be there
+    expression ==> we will find label for them
+
+    Save ==>
+        Put values in data model and then ...............
+
+===============================================================================================================================
+Flex Field
+    UI --> its column will be
+    Accountid
+    accountid.telephoneno
+    accountid.checkno
+    accountid.billdate
+
+    Data model will monitor value change
+        ==> value changes and get column value
+            ==> it is flex field ==> then we will remove previous columns and add new columns
+            ==> how to do it in panel
+              ==> panel binding need to be considered
+    Single column will be there in table for flex field
+        UI -> Popup box with single column in a line
+     We also need to change column cache --> as data model is depends on column cache
+
+     Do we required column cache -> as it may lead to some problems ==> so we need to remove it if possible
+        ==> for querying we may need to iterate column and then send them selves without using column cache
+        ==>we can create two coluns for duration with visibility none so that they can participate in data model changes while saving
+
+
+======================================
+https://github.com/srod/node-minify‎
+
+
+
+
+
+
+
+
+
+
+
+
+

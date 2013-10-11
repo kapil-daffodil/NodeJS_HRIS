@@ -1,0 +1,17 @@
+<!doctype html>
+<html ng-app>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.js"></script>
+    <script src="js/expression-resolver.js"></script>
+</head>
+<body>
+
+<div ng-controller="Cntl1">
+    {{result1}}
+    {{result2}}
+
+<span ng-bind-html-unsafe="fname"></span>
+<span ng-bind-html-unsafe="getColValue()"></span>
+</div>
+</body>
+</html>

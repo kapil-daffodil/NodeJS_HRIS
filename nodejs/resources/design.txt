@@ -1,0 +1,676 @@
+problem
+       column view - click quickly two times, and then close, one popup remains open and issue arise
+       check resize
+       we will align tool bar to right side in child view
+       index in panel
+       Quick view issue
+            action is coming in footer
+            maximize should not be shown on popup
+        Close and maximize position are not proper in child views
+        Panel background should be white
+
+        Filter view : column not showing
+        Schedule column with Sachin Bansal
+
+
+        Menus issue -> I did not use client side menu to show, and asked menus again as I can not predict the client behaviour, need to check how can it be done, Second  I need view to open and can not use newly created menu
+        app panel - text type issue, it is not binding with dotted value -- check
+        Voucher detal is not proper, left side space avialble for some coumn
+
+        some fields are going extra to save in voucher -> their dotted value is going extra to save
+            voucher_type_id.name
+            Voucher Type 1 --> it is a lookup type column
+        If insert button is pressed -> it shold be editable in single click
+        index  rendered -> error prone to get $parent.$parent.$index, we should get row index in data so that it should be direct usable
+         Cannot read property 'user' of undefined -> when logout and then ask usersatte from apps studio by passing invalid usk, case in beta
+
+    Pending
+        Aggregate support
+        View detail should be part of table
+
+===============================================
+ 09-10-13
+    Visible, editable and default value
+
+    default value
+        fullName = firstName + lastName
+        invoice - aggregates, line items aggregates
+
+===============================================
+ 07-10-13
+    User group in usres
+
+    case :
+        officialemailid : string
+        phones : string : multiple
+        addresses : object : [ ]
+        addresses.city : string
+        addresses.state : string
+        addresses.country : string
+    Menus :
+        metadata
+            columns :
+                username
+                usergroupid : object
+                usergroupid.officicalemaiid : string
+                usergroupid.phones : string : multiple
+                usergroupid.addresses : object : [ ] : child/Embed
+                usergroupid.addresses.city : string
+                usergroupid.addresses.state : string
+                usergroupid.addresses.country : string
+
+
+===============================================
+ 03-10-13
+    Tree design with Pawan and rohit
+        Assets      Path -
+            CurrentAssets                           Assets
+                Debtor                              Asset, Current Asset
+                Liquid Assets                       Asset, Current Asset
+            Fixed Assets                            Asset
+                Land                                Asset, Fixed Asset
+                Furniture                           Asset, Fixed Asset
+        Liablitiy
+            Bank
+                Private
+                    Inhouse
+                        Sec 14
+                            PNB
+                    Outhose
+                Public
+            Capital
+        Income
+            Misc Income
+            Rent
+            Intersst
+        Expens
+            Electricity
+            Salary
+                HR
+                Software
+                    PHP
+                    DotNet
+                Admin
+
+
+
+ ===============================================
+ 30-09-13
+       Resource validation :
+            column expression to be save with trim
+            lookup resource
+                at least one primray column of string or simple time
+            if lookup
+                then table or option should be defined and only one (either table or options)
+       primary columns :
+        string type column should come first so that we can apply order by or used it as an display expression where required
+       Cron : Manjeet
+           Last week post created
+           All user of mtm
+           No. of mails that can be sent in a single day or use some other accounts
+       View Notification
+            user, organization, application
+            view level
+                can be add or delete
+            date column : overdue invoice - duedate
+                as on date
+                range filter - last n days, Week, Month, last month
+            Schedule view (Add  but can not Delete or think if can)
+                Name
+                Schedule
+                Date column  :  date type columns
+                Date Filter : last n days, Week, Month, last month : options
+                On/Off/None
+                Off - currenlty off
+                None - Permianent delete
+                views
+                    schedulescustomization :
+                    {
+                    }
+
+                schedules : [] separate table
+                    name
+                    schedule
+                    template
+                    datecolum
+                    datefilter
+                    viewid - developer | organization | user
+                    scheduleid
+
+                Cron Job (every hrs)
+                    select * from views where schedule.when
+                     applicationid , viewid
+                     organizatid, viewid
+                     userid, viewid
+
+               how to run a schedule  `
+            Generate  EJS template
+
+       Template
+            template : boolean
+                html
+                resources
+                    js
+                    css
+                applicationid
+                viewid
+            page -
+                domainid
+                pagetemplate
+                    <href
+                    domainid
+                    .btn {
+                        background : url("/images/logo.png?");
+
+                        website :
+
+
+
+
+                    }
+
+            applane.com
+            mtm.com
+     ------------------------------------
+      Public template
+
+        Modules, as a website , a type : 2 hrs
+            /login
+                    login
+                /signup
+                /forgotpassword
+                /admin
+            templates
+            resources
+            pageconflicts
+            resourcesconflicts
+                website
+                mdoule
+                resources
+                pages
+
+
+
+        Add module
+            modulename
+            prefix
+
+        templates
+            websiteid
+            websites :
+             Job
+                on update
+                    when a new website is created
+        resources
+            websiteid
+            websites
+        Import template
+
+
+
+     ------------------------------------------
+      Aggregate
+        accountgroups
+            name  :string
+            parentaccountgroupid : self recursive
+            accountgrouptotal : aggregate
+                 table : vouchers
+                 relatecolumn : vli.accountid.accountgroupid
+                 aggregtecolumn : vli.amount
+                 datecolumn :    voucherdate
+                 recursivecolumn : parentaccountgroupid
+
+                 [{id:{accountgroups__book:"DirectExpanse",},value:{amount:100}},
+                 {id:{accountgroups__book:"DirectIncome"},value:{amount:-100}}]
+
+                 [{id:{accountgroups__book:"DirectExpanse",},value:{amount:100}},
+                                  {id:{accountgroups__book:"DirectIncome"},value:{amount:-100}}]
+
+        accounts
+            name : string
+            accountgroupid : lookup
+            accounttotal : aggregate
+                table : vouchers
+                relatecolumn : vli.accountid
+                aggregtecolumn : vli.amount
+                datecolumn :    voucherdate
+            accounttotal_balance : Balance up to date : how to maintain entry in this column
+
+
+        accounts__accounttotals
+             accounts__book : lookup accounts
+             vli_amount : --> as of vli.amount
+             type --> year/month/day
+             yearid - string
+             monthid   -sring
+             voucherdate - string -> Date
+        When voucher get saved
+            voucherdate : 1 nov
+            vli  : [ {accountid:cash, amount:1500},]
+
+        Doubt
+            how to enable module in account and vouchers
+            paretnaccountgroupid should be a replicate column to maintin recursive aggregate
+            When we chage accountgroupid of account or parentaccountgroupid of accountgroup
+            IF some problem arise, any unforseen like transaction time out, wait timeout, server close - ????
+                When account id of a voucher get changed, or account groupid id change and just then a new vocuher get saved with new account id or accountgroupid,
+                    when we will get vouchers of previous accountid ?
+
+
+
+        Query :
+           table : accounts
+           columns :
+                name,
+                accounttotals
+           filter : today, range, month....... Sep 2013
+
+           select  name, (select sum(amout) from accounttotal where account=? and month=Sep and year  =2013 from
+
+
+
+   ------------------------------------------
+       Tree
+            tasks
+                index : desc
+                parenttaskid :
+                    order : asc
+                    recursive :
+                    result : level/nested
+                    level : -1 --> fetch all
+                    opennodes : ["","",""] - X
+                    retstrict : 2000 records
+
+
+             orders : [
+             {expression : index, order:desc},
+             {expression : parenttaskid, order : desc, recursive  : "parenttaskid" }
+             ]
+
+            orders
+                parent
+
+   ---------------------------------------------
+       Group
+            account
+                order
+                    accountgroupid :
+                        recursive : parentaccountgroupid
+                        result : level, nested
+                    orders : [
+                                 {expression : accountgroupid, order : asc, group : true, columns:[], recursive  : "parentaccountgroupid" }
+                                 ]
+            tasks
+                status
+                ownerid
+                    reporting_to
+
+
+   ---------------------------------------------
+
+
+
+Client Sprint
+        View group and Menu should be reflected at cient side immediately
+        menus - ask not coming whle saving menus. so we can not use it directly
+        Shedule a View :
+        schedule :
+            date, it should be in yyyy-mm-dd format
+
+
+
+ problem
+       In look up, if last value and current value is same , value will not be selected by the autocomplete.
+       column view - click quickly two times, and then close, one popup remains open and issue arise
+       check resize
+       we will align tool bar to right side in child view
+       index in panel
+       Quick view issue
+            action is coming in footer
+            maximize should not be shown on popup
+        Close and maximize position are not proper in child views
+        Panel background should be white
+
+        Filter view : column not showing
+        Schedule column with Sachin Bansal
+
+
+        Menus issue -> I did not use client side menu to show, and asked menus again as I can not predict the client behaviour, need to check how can it be done, Second  I need view to open and can not use newly created menu
+        app panel - text type issue, it is not binding with dotted value -- check
+        Voucher detal is not proper, left side space avialble for some coumn
+
+=======================================End of 30-09===========================================================================================
+
+
+
+===================================================
+30-09-13
+    Cron Jobs
+        Weekly mail
+            Post owner
+
+===================================================
+28-09-13
+    Client side delivery
+
+
+
+
+===================================================
+27-09-13
+
+
+
+    Schedule notification : mail
+        Schedule view
+            Define Schedule
+                Daily
+                Date :
+                    Current Date,
+                    Range - > Week, Month, Last two days .....
+            Option to save at developer, organization or user level
+            scheduleviews
+                viewid
+                schedule : when
+                date : parameterized
+                userid
+                organization
+                applicationid
+                Off : User level, Organization Level, Application
+                End user can define new schedule
+                template
+
+
+
+
+
+
+
+===================================================
+26-09-13
+    Grid design
+        customization should be understood by client it self
+        tool bar will be shared with diff color
+        row action click, after again click -> it should be treated as last row action
+
+    idColumn : _id, columns._id
+
+    columns : []
+        label
+        expression/field
+        width
+        height
+        mandatory
+        editableCellTemplate
+        cellTemplate
+        editable  :true/false
+        sortable : true/false
+        filterable  :true/false
+        update : true
+        visible :
+        default
+
+
+    editableCellTemplate
+    cellTemplate
+    toolBarTemplate
+    rowTemplate
+    headerTemplate
+    footerTemplate
+    data
+    sortable
+    filterable
+    save : true     how to ask if we have to show save image or label | saveTemplate, actionTemplate
+    save : {    check if it is object
+        label :
+        image :
+    }
+    close  :true
+    insert : true
+    detail : true --> will be added row actions
+    refresh : true
+    navigation/pageable : true/object
+        showTotalRowCount : true
+        pageSize : true
+
+    accountgrid : {grid:{}} {viewid:}
+    vouchergrid : {grid{}}, {appgrid:{viewid:}}  ->
+    childs  : [ ]    // view load -> table/panel,  : {columns:[], }
+
+
+
+
+    metadatasource
+
+
+
+
+
+
+
+===================================================
+23-09-13
+    Tasks
+        Baas service for conversion unit
+        apps studio --> user level --> conversion unit
+        aggregate : structure change for aggregate , keep aggregate in data for main table and
+    Aggregate
+        Table
+            columns
+
+                label : amount
+                type : currency/duration
+                footeraggregate : true
+            data:{data:[], module_results:{aggregate:{estimated_effort:{time:19, unit : hrs}, cost:{amoutn:15,type:{currency:INR}}}}}
+            {USD:45,}
+            {HRS : 1, Minutes : }
+            conversion:{
+                currency{
+                    conversion :{ INR:1, USD : 0.23444},
+                    leafunit : 100
+                    base : {_id:1, currency:INR}
+                }
+                duration:{
+
+                }
+
+            }
+
+
+            vli:[]
+            vli :{data}
+
+            vli :{}
+             data: {
+                data : [
+                    {
+                        voucher_no : 1200,
+                        amount : 10,
+                        vli : [
+                            {
+                                narration :testing
+                                amount : 10
+                            }
+                        ],
+                        moduleresults :{
+                            vli :{
+                            aggregate
+                            }
+
+                        }
+
+                    }
+
+                ] ,
+                moduleresults:{
+                    data :{
+                    aggregate : {
+                                            amount : 10
+                                        }
+                    }
+
+                }
+
+             }
+
+
+
+
+        Nested
+
+===================================================
+16-09-13
+    maximize/minimize
+
+
+===================================================
+10-09-13
+Angular Client Side
+ApplaneJS
+Multiple model support
+    AppModel
+        User
+        Application
+        ViewGroups
+        Views - menus
+        Current view
+        Current organization
+        Organization
+        Quick view
+        Current quick view
+    ViewStackModel
+        Views
+    ViewModel
+        CurrentView
+            Columns
+            Filtercolumns
+            Appliedfilters
+            Order columns
+            Applied order columns
+    DataModel
+            Columns
+            refresh()
+            next()
+            prev()
+            .......
+            Data
+Independent components
+    These components should not be aware of data model
+        ActionCollection
+        Menu
+        Table
+            HeaderFreeze
+            ScrollableHeader
+            GroupTable
+            TreeTable
+        Panel
+        TableDetail
+        Lookup
+        MultipleLookup
+        Date
+        Duration
+        Currency
+        Time
+        FileUpload
+        ImageUpload
+        RichTextEditor
+        ConfirmationBox
+        Schedule
+    Action
+        Save
+        Update
+        Delete
+        Refresh
+        Filters
+        Navigation
+
+Every component has own test case in html  in which we will show scope value and editor behaviour
+    Lookup
+        lookup.js
+            datasource
+                URL
+                    table
+                    filter
+                    columns
+                HardCode data
+            expression
+            displayexpression
+            cache : true/false
+            it can be dependent on some another columns
+            how to open popup or expand when + clicked for other dotted value, pageid.uri, pageid.websiteid .......
+        lookup.css
+    Currency
+    Duration
+        Dependent on text.js, lookup.js
+        timeexpression
+        timeunitexpression
+        timeunitdatasource
+        timeunitdisplayexpression
+        timeunitcache
+    Date
+        expression
+        formatter
+    Schedule
+    Grid
+        save:true
+        delete:true
+        insert:true
+        close:true
+        table:tasks__taskmanager
+        columns
+            task
+                type : string
+            ownerid
+                type:   lookup
+                update: true
+            duedate
+                type:when
+        filtercolumns
+            duedate.duedate
+            ownerid
+        orderscolumn
+            ownerid
+
+
+
+
+
+
+
+
+
+
+
+
+===================================================
+07-09-13
+Tree in Grid UI
+collapse/expand model
+When click
+    check current mode
+    keep variable busy:true
+    by doing this we can remove other calls if some data is getting form server, even if there is some delay in loading... message
+
+    get _id of that record
+    call some type of refresh() datamodel
+    on records comes
+    insert records in between so that binding will automatically done
+
+===================================================
+07-09-13
+Public Template
+
+Template can be public
+Use case
+    Login template
+        it create a login page
+            username
+            password
+             /login?username&password&usergroupid=afb
+            afb.daffodilapps.com/login
+                /login page
+                    template : appstudio_login
+                    params : afterlogin:'/', usergroupid:
+
+AppsStudio template
+===================================================

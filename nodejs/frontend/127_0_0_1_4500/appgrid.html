@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap_beta.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/applane_beta.css"/>
+    <link rel="stylesheet" type="text/css" href="css/advancesearch_beta.css"/>
+    <link href="css/bootstrap-datepicker.css" rel="stylesheet"/>
+
+    <style>
+        .grid-scroll {
+            overflow-X: auto;
+            overflow-y: scroll;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/bootstrap_beta.js"></script>
+    <script type="text/javascript" src="js/appUtil1.js"></script>
+    <!--<script type="text/javascript" src="js/appgrid.js"></script>-->
+
+    <script type="text/javascript">
+        var app = angular.module('applane', ['$appstrap.directives'], function ($routeProvider, $locationProvider) {
+            $locationProvider.html5Mode(true);
+        });
+
+        AppUtil.resolveDot();
+
+        app.controller('AppCtrl', function ($scope, $location, $timeout) {
+            $scope.tasks = {data:[
+                {shortDesc:"First task of angular grid", owner:{_id:1, "username":"Rohit Bansal"}},
+                {shortDesc:"First task of angular grid", owner:{_id:1, "username":"Rohit Bansal"}},
+                {shortDesc:"First task of angular grid", owner:{_id:1, "username":"Rohit Bansal"}},
+                {shortDesc:"First task of angular grid", owner:{_id:1, "username":"Rohit Bansal"}},
+                {shortDesc:"First task of angular grid", owner:{_id:1, "username":"Rohit Bansal"}},
+                {shortDesc:"First task of angular grid", owner:{_id:1, "username":"Rohit Bansal"}},
+                {shortDesc:"First task of angular grid", owner:{_id:1, "username":"Rohit Bansal"}},
+                {shortDesc:"First task of angular grid", owner:{_id:1, "username":"Rohit Bansal"}},
+                {shortDesc:"First task of angular grid", owner:{_id:1, "username":"Rohit Bansal"}}
+            ]}
+            var columns = [
+                {expression:"shortDesc", editable:true, width:400} ,
+                {label:"Owner", expression:"owner", width:200}
+            ];
+            var toolbar = ["refresh", "delete", "save"];
+//            var toolbar = {left:[],right:[]};
+            $scope.gridOptions = {data:"tasks.data", columns:columns, scrollable:true, id:"1", idColumn:"_id", selectable:true, toolbar:toolbar};
+
+        });
+
+
+    </script>
+
+</head>
+
+<body ng-app="applane" ng-controller="AppCtrl" style="margin: 5px">
+
+<div style="height: 200px; width : 800px ;background-color: #d0d9df;border: 1px solid #000000">
+    <!--<app-grid></app-grid>-->
+</div>
+
+
+</body>
+</html>

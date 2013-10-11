@@ -1,0 +1,50 @@
+<!doctype HTML>
+
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/map-highlight.min.js"></script>
+
+    <script type="text/javascript">
+                     $(function() {
+                         $('.map').maphilight();
+                     });
+    </script>
+
+    <script type="text/javascript">
+        function test() {
+            alert("Called");
+        }
+
+
+
+        function hovrElement(element) {
+//            var elementCords = $(element).attr('coords');
+//            var c = document.getElementById('myCanvas');
+//            var ctx = c.getContext('2d');
+//            ctx.fillStyle = '#FF0000';
+//            ctx.fillRect(0,0,180,226);
+        }
+
+    </script>
+    <style>
+        .map{
+            background-repeat: no-repeat !important;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<img  class="map" src="images/hunan-digestive.jpg" width="500" height="500" alt="Planets" usemap="#planetmap">
+
+<map name="planetmap">
+    <area shape="rect" coords="17,45,180,226" onclick="test()"  title="Sun" alt="Sun">
+    <area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury">
+    <area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus" >
+</map>
+</body>
+
+
+</html>

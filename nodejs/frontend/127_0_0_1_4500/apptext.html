@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Appnumber</title>
+    <script src="js/angular.js"></script>
+    <script type="text/javascript">
+        var appModule = angular.module('$appModule', []);
+    </script>
+    <script src="js/apptext.js"></script>
+
+    <script type="text/javascript">
+        var app = angular.module('applane', ['$appModule'], function ($routeProvider, $locationProvider) {
+            $locationProvider.html5Mode(true);
+        });
+
+        app.controller('AppCtrl', function ($scope) {
+            $scope.student = {"firstname":"Rohit"};
+
+        });
+
+
+    </script>
+</head>
+<body ng-app="applane" ng-controller="AppCtrl">
+    <app-text ng-init="model='student';field='firstname'"></app-text>
+    <app-text ng-init="model='student';field='lastname'"></app-text>
+    {{ student | json  }}
+</div>
+</body>
+</html>

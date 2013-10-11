@@ -1,0 +1,26 @@
+<!doctype HTML>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script type="text/javascript" >
+        var app = angular.module('app', []);
+        app.controller('AppCtrl', function ($scope) {
+            $scope.row = {"columns.type":{"type":"lookup"}}
+            $scope.exp = "columns.type"
+        });
+
+    </script>
+
+
+</head>
+<body ng-app="app" ng-controller="AppCtrl">
+<input type="text" ng-model="row[exp].type" />
+<input ng-show="row['columns.type'].type=='lookup'" placeholder="table"/>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+
+map reduce
+    inside map reduce function
+        you can not interact with node js
+
+    aggreate total
+        update - > how to remove old value
+        delete -> row has been deleted
+            we may have to run this in before ?????
+
+        voucher has multiple line items
+            and we have to run map reduce on voucher line item
+
+
+before job
+    validation
+    before  : this......
+    validation should be on a single record
+    we do not require validation across validation
+    we will not provide query in before ..........
+
+    syntax like db.query.......
+
+
+transform function
+    for voucher
+        key column
+
+        can be run for single record
+        can be run with cron job
+
+        business operation do not require query operation
+
+        whether table job can be achieved using this .......
+
+        For aggreagete
+
+        day week month year
+
+        memory fast
+
+        they used BSON, which is super fast
+
+        map
+        reduce ->it will be used by aggregate for old value also, thats why
+
+        finialze bhi hota hai method
+
+
+
+
+
+
+
+=====================
+    mongo client library
+
+vouchers
+    voucher_number
+    voucher_date
+
+    voucherlineitems
+        accountid
+        amount : currency
+
+accounts
+    name
+    accountgroupid
+
+accountgroups
+    name
+    parentaccountgroupid
+
+
+accounttotals
+    accountid
+    date
+    amount
+
+voucher.insert("101","12 July 2013",[{"cash",1200},{"Pawan",-1200} ])
+
+db.vouchers.mapReduce(
+
+query : {_id : 1233}
+
+
+
+)

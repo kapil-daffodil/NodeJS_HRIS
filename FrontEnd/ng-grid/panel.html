@@ -1,0 +1,47 @@
+<!Doctype HTML>
+<html>
+
+<head>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+
+       function showData(){
+           var data = [
+               {"label":"Task", "type":"text"},
+               {"label":"Priority", "type":"text"},
+               {"label":"Description", "type":"textarea"}
+           ];
+
+
+           var dataLength = data.length;
+           var html = '';
+
+
+           for (var i = 0; i < dataLength; i++) {
+               var type = data[i].type;
+               var laebl = data[i].label;
+
+               if (type == "text") {
+                   html += '<div style="width:50%;float: left;"><div style="width:20%;float: left;">'+laebl+'</div><div style="width:30%;float: left;"><input type="text" /></div></div>';
+               } else if (type == "textarea") {
+                   html += '<div style="width:100%;float: left;"><div style="width:10%;float: left;">'+laebl+'</div><div style="width:80%;float: left;"><textarea></textarea></div></div>';
+               }
+
+           }
+
+           $('#content').html(html);
+       }
+
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+<div id="content"><input type="button" value="click me" onclick="showData();"/></div>
+
+</body>
+</html>

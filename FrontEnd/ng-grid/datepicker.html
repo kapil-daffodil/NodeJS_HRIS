@@ -1,0 +1,54 @@
+<!doctype HTML>
+        <html ng-app>
+            <head>
+
+                <script type="text/javascript" src="js/jquery.js"></script>
+                <script type="text/javascript" src="js/angular.js"></script>
+                <script type="text/javascript" src="js/bootstrap.js"></script>
+                <script type="text/javascript" src="js/bootstrap-datepicker-backup.js"></script>
+
+                <script type="text/javascript" src="js/dateController.js"></script>
+                <script type="text/javascript" src="js/dateFormat.js"></script>
+
+                <link href="css/bootstrap.min.css" rel="stylesheet"/>
+                <link href="css/bootstrap-datepicker.css" rel="stylesheet"/>
+
+            </head>
+
+            <body ng-controller="DATECTL">
+            <div class="input-append date datepicker"  data-date-format="dd-mm-yyyy" ng-controller="CTL">
+                <span class="navigating-arrows prev" ng-click="prev()"><img src='images/left-arrow.png'/></span>
+                <input ng-click="showPopUp()" size="16" type="text" ng-model="dateinput" title="{{dateinput}}" class="calender-input" style=" border: 1px solid #EEEEEE;border-radius: 0 0 0 0;height: 26px;width: 200px;"/>
+                <span class="navigating-arrows next" ng-click="next()"><img src='images/right-arrow.png'/></span>
+                <span class="add-on show-calender-icon"  ><i class="icon-th" style='background-position: -238px 1px;'></i></span>
+                <div id="popUp" class="select-options-for-date">
+
+                    <ul>
+
+                        <li class="date" ng-click="current(true,false,false,false)">Date</li>
+                        <li class="month" ng-click="current(false,true,false,false)">Month</li>
+                        <li class="year" ng-click="current(false,false,true,false)">Year</li>
+                        <li class="year" ng-click="current(false,false,false,true)">Week</li>
+
+                    </ul>
+                </div>
+
+
+            </div>
+
+            <script type="text/javascript">
+
+                function CTL($scope){
+                    $scope.showPopUp = function(){
+                        $('#popUp').fadeIn("slow");
+                    }
+                }
+
+                $('.datepicker').datepicker({autoclose:true});
+
+            </script>
+
+
+            </body>
+
+        </html>

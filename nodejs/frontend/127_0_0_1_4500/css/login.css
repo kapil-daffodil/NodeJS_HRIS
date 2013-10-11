@@ -1,0 +1,122 @@
+
+html {
+    color: #333333;
+    font: arial,helvetica,sans-serif;
+    font-size: 12px;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.login-container .login-page-header{
+    background: none repeat scroll 0 0 #F1F1F1;
+    border-bottom: 1px solid #E5E5E5;
+    height: 72px;
+    padding: 0 50px;
+}
+.login-container .login-page-header .logo{
+    float: left;
+    padding: 16px 0;
+    width: 400px;
+}
+.login-container .login-page-header .create-account{
+    float: right;
+    padding: 22px 0;
+}
+.login-container .login-page-header .new-at-taskspace{
+    float: left;
+    padding: 5px 14px 0 0;
+}
+.login-container .login-page-header .header-sign-up-button input[type="button"], .login-container .right-body input[type="button"]{
+    background: none repeat scroll 0 0 #4C90FD;
+    border: medium none;
+    color: white;
+    padding: 6px;
+    text-transform: uppercase;
+}
+.login-container .login-page-center-body{
+    height: 350px;
+    padding: 83px 0;
+}
+
+.login-container .login-page-center-body-one{
+    height: 430px;
+    padding: 40px 0px;
+}
+
+
+
+.login-container .right-body-one {
+    float: right;
+    height: 430px;
+    width: 350px;
+}
+
+
+
+.login-container .inner-center{
+    width: 900px;
+    margin: 0 auto;
+}
+.login-container .left-body{
+    float: left;
+    width: 550px;
+}
+.login-container .left-body img{
+    height: 350px;
+    width: 495px;
+}
+.login-container .right-body{
+    float: right;
+    height: 350px;
+    width: 350px;
+}
+.login-container .right-body .right-body-inner{
+    background:none repeat scroll 0 0 #557290;
+    border: 1px solid #E5E5E5;
+    float: right;
+    height: 187px;
+    padding: 10px;
+    width: 328px;
+    margin-top: 70px;
+}
+.login-container .right-body .sign-text{
+    color: #FFFFFF;
+    font-size: 16px;
+    padding-bottom: 15px;
+}
+
+.login-container .right-body input[type="text"], .login-container .right-body input[type="password"]{
+    border-radius: 0 0 0 0;
+    height: 30px;
+    margin-bottom: 0px;
+    width: 100%;
+}
+.login-container .right-body .input-divs{
+   height: 60px;
+}
+.login-container .copyright-parent{
+    float: right;
+    font-size: 14px;
+    padding: 23px 0;
+}
+.login-container .copyright{
+    padding-right: 12px;
+}
+.error-message{
+    color: red;
+    float: left;
+    font-size: 13px;
+    padding: 3px 0 0 2px;
+}
+.recaptcha_theme_red #recaptcha_response_field{height: 18px !important;}
+
+.login-container .right-body .right-body-inner-one {
+    height: 408px;
+    margin-top: 0px;
+}
+.login-container .left-body-one img{
+    width: 495px;
+    height: 430px;
+}

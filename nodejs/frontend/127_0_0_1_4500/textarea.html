@@ -1,0 +1,25 @@
+<html>
+<head>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="textarea.js"></script>
+
+
+    <link href="css/applane.css" rel="stylesheet"/>
+
+
+</head>
+
+<body ng-controller="textarea" ng-app="webApp">
+
+
+<textarea-auto-resize></textarea-auto-resize>
+
+<div ng-bind='rte1' style="float: right;width: 400px;"></div>
+{{colmetadata | json}}
+{{rte1}}
+
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+<div>
+    <div class = "app-button" ng-click="insert()" >Insert</div>
+    <div class = "app-button" ng-click="save()" >Save</div>
+    <div class = "app-button" ng-click="refresh()" >Refresh</div>
+</div>
+
+<div class="app-view" ng-switch on="viewtype">
+    <div class="app-view-holder" ng-switch-when="grid">
+        <div class="gridStyle" ng-grid="gridOptions"></div>
+    </div>
+    <div ng-switch-default></div>
+</div>

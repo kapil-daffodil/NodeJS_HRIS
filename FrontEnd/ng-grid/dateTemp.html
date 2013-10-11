@@ -1,0 +1,28 @@
+<!doctype HTML>
+        <html>
+
+            <head>
+                <script type="text/javascript" src="js/jquery.js"></script>
+                <script type="text/javascript" src="js/dateFormat.js"></script>
+                <script type="text/javascript" src="js/date.js"></script>
+                <script type="text/javascript">
+
+
+                </script>
+            </head>
+
+            <body>
+            <div id="dateholder">&nbsp;</div>
+
+            <input type="button" value="Previous" onclick="prev()"/>
+            <input type="button" value="Next" onclick="next()"/>
+            <input type="button" value="Select Date" onclick="current(true,false,false,false)"/>
+            <input type="button" value="Select Month" onclick="current(false,true,false,false)"/>
+            <input type="button" value="Select Year" onclick="current(false,false,true,false)"/>
+            <input type="button" value="Select Week" onclick="current(false,false,false,true)"/>
+
+
+            </body>
+
+
+        </html>

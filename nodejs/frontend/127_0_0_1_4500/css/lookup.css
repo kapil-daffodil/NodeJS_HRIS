@@ -1,0 +1,13 @@
+.lookup-option{
+    padding: 5px;
+}
+
+.lookup-option-panel{
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.lookup-holder{
+    position: relative;
+}

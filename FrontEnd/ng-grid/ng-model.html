@@ -1,0 +1,25 @@
+<!doctype HTML>
+<html  ng-app="applane">
+<head lang="en">
+
+
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/ng-model.js"></script>
+
+
+
+</head>
+<body ng-controller="AppCtrl" >
+    <input ng-model="state.stateName" />
+    <input ng-model="state.distict[0].districtname" placeholder="District"/>
+    <input ng-model="state[colmetadata.expression][colmetadata.display]" placeholder="City"/>
+    <!--<input ng-model="state.cityid.name" placeholder="City"/>-->
+    <input ng-model="state.cityid.mayor" placeholder="Mayor"/>
+    <input ng-model="state.cityid.districtid.population" placeholder="Population"/>
+    <p>
+        {{state}}
+    </p>
+
+
+</body>
+</html>

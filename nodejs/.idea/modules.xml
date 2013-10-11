@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/node_modules/apputil/apputil.iml" filepath="$PROJECT_DIR$/node_modules/apputil/apputil.iml" />
+      <module fileurl="file://$PROJECT_DIR$/baas/baas.iml" filepath="$PROJECT_DIR$/baas/baas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/node_modules/customcode/customcode.iml" filepath="$PROJECT_DIR$/node_modules/customcode/customcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/node_modules/ejs/ejs.iml" filepath="$PROJECT_DIR$/node_modules/ejs/ejs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/node_modules/nodemailer/examples/examples.iml" filepath="$PROJECT_DIR$/node_modules/nodemailer/examples/examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/node_modules/express/express.iml" filepath="$PROJECT_DIR$/node_modules/express/express.iml" />
+      <module fileurl="file://$PROJECT_DIR$/node_modules/formidable/formidable.iml" filepath="$PROJECT_DIR$/node_modules/formidable/formidable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/frontend/frontend.iml" filepath="$PROJECT_DIR$/frontend/frontend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/node_modules/nodemailer/lib/lib.iml" filepath="$PROJECT_DIR$/node_modules/nodemailer/lib/lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/node_modules/nodemailer/node_modules/mailcomposer/lib/lib.iml" filepath="$PROJECT_DIR$/node_modules/nodemailer/node_modules/mailcomposer/lib/lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/node_modules/xml2js/lib/lib.iml" filepath="$PROJECT_DIR$/node_modules/xml2js/lib/lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/node_modules/nodemailer/node_modules/mailcomposer/node_modules/mime/mime.iml" filepath="$PROJECT_DIR$/node_modules/nodemailer/node_modules/mailcomposer/node_modules/mime/mime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/node_modules/nodemailer/node_modules/mailcomposer/node_modules/mimelib/mimelib.iml" filepath="$PROJECT_DIR$/node_modules/nodemailer/node_modules/mailcomposer/node_modules/mimelib/mimelib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/node_modules/moment/moment.iml" filepath="$PROJECT_DIR$/node_modules/moment/moment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/node_modules/mongodb/mongodb.iml" filepath="$PROJECT_DIR$/node_modules/mongodb/mongodb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/node_modules/node-xlsx/node-xlsx.iml" filepath="$PROJECT_DIR$/node_modules/node-xlsx/node-xlsx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/node_modules/nodejsapi/nodejsapi.iml" filepath="$PROJECT_DIR$/node_modules/nodejsapi/nodejsapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/node_modules/xml2js/node_modules/sax/sax.iml" filepath="$PROJECT_DIR$/node_modules/xml2js/node_modules/sax/sax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/node_modules/nodemailer/node_modules/simplesmtp/simplesmtp.iml" filepath="$PROJECT_DIR$/node_modules/nodemailer/node_modules/simplesmtp/simplesmtp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/node_modules/nodemailer/node_modules/mailcomposer/test/test.iml" filepath="$PROJECT_DIR$/node_modules/nodemailer/node_modules/mailcomposer/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/node_modules/nodemailer/test/test.iml" filepath="$PROJECT_DIR$/node_modules/nodemailer/test/test.iml" />
+    </modules>
+  </component>
+</project>
+

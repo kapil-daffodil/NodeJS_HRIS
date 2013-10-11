@@ -1,0 +1,71 @@
+<html >
+    <head>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/angular.js"></script>
+        <script type="text/javascript" src="js/applane-strap.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
+
+        <link href="css/login.css" rel="stylesheet"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="css/prettify.css" rel="stylesheet"/>
+
+    </head>
+
+    <body>
+
+    <div ng-app="applane" class="login-container" ng-controller="login" ng-show="showLoginScreen">
+
+        <!--header block start-->
+
+        <div class="login-page-header">
+            <div class="logo"><a href="/"><img src="/images/applane_large_logo.png" alt="Logo"/></a></div>
+            <div class="create-account">
+                <span class="new-at-taskspace">New at TaskSpace?</span>
+                <span class="header-sign-up-button"><input type="button" value="Sign Up"/></span>
+            </div>
+        </div>
+
+        <!--header block end-->
+
+
+        <!--center block start-->
+            <div class="login-page-center-body">
+                <div class="inner-center">
+
+                    <!--left block start-->
+                    <div class="left-body">
+                        <img src="/images/tesk_manager.png" alt="Task-manager"/>
+                    </div>
+                    <!--left block end-->
+
+
+                    <div class="right-body">
+                        <div  class="right-body-inner">
+                            <div class="sign-text">Sign In</div>
+
+                            <div class="input-divs"><input id="username" type="text" ng-model="username" placeholder="Username"/></div>
+
+                            <div class="input-divs"><input id="password" on-key-down-fn="handleKeyPress" type="password" ng-model="password" placeholder="Password"/></div>
+
+                              <input class="btn-primary" ng-click="userLogin()" value="Login" type="button"/>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--center block start-->
+
+
+        <div class="login-page-header">
+            <div class="logo"><a href="/"><img src="/images/applane_large_logo.png" alt="Logo"/></a></div>
+            <div class="copyright-parent">
+                <span class="copyright">&copy; 2012</span>
+                <span><img src="/images/applane_small_logo.png" alt="Logo"/></span>
+            </div>
+        </div>
+
+
+     </div>
+
+    </body>
+</html>

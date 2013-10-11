@@ -1,0 +1,82 @@
+<app-grid></app-grid>
+gridOptions : {
+
+      headerFreeze   : true/false     --> check if required or not  | scrollable : true/false can be used instead of this
+      height         : 300 | 300px | 100% | undefined
+      width          : 300 | 300px | 100% | undefined
+      headerTemplate : ""
+      rowTemplate    : ""
+      cellTemplate   : ""
+      editableCellTemplate : ""
+      rowActionTemplate : ""
+      selectionColumnTemplate : ""
+      dataSource     : ""                       --> should be available in scope
+      data           : ""                       --> should be available in scope
+      footerdata     : ""
+      rowHeight      :
+      editable       : true/false
+      quickViews     :[{gridoptions}]
+      rowActions     :[{gridOptions}]
+      detail         :true/false
+      insert         :true/false/object
+                     {
+                        panel : true
+
+                     }
+      save           :true/false/object
+                     {
+                        label : ""
+                        image : ""
+                        busyMessage :""
+                        postSaveMessage : ""
+                        beforeSaveCallBack : function(){
+                                                return false if further saving not required
+                                             }
+                        postSaveCallBack : function(){
+
+                        }
+                        refresh : true / false
+                        close   : true / false
+                        template : ""
+                     }
+      toolBarTemplate : ""
+      columns         :[ {              //if not provided get it from data
+
+                        label : ""
+                        width : ""
+                        expression : ""
+                        editable : ""
+                        sortable : ""
+                        cellTemplate :""
+                        editableCellTemplate : ""
+
+
+
+                        }]
+      footerRowTemplate : ""
+      refresh           : true/false
+      navigation        : true / false/{
+
+                         }
+
+      toolbar : ["save", {}, "close" ] ... can be taken in this way
+      editable  :true/false
+      sortable  :true/false
+      filterable  :true/false
+
+      visibillity
+            Both/Table/Panel/Off
+      subvisibility
+            Embed in case of Panel
+            We should not change type to view in case of nested grid, some alternate should be done
+
+
+
+
+
+
+
+
+
+
+}
